@@ -17,6 +17,27 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+  ////////////////////////////////
+ ///      Admin ROUTE         ///
+////////////////////////////////
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', 'HomeController@index')->name('dashboard');
+
+});
+
+  ////////////////////////////////
+ ///      Public ROUTE        ///
+////////////////////////////////
+
+    /*About page route*/
+    Route::get('about', 'PagesController@getAbout');
+
+    /*Connect page route*/
+    Route::get('connect', 'PagesController@getConnect');
+    /* Contact page route*/
+    Route::get('contact', 'PagesController@getContact');
+    Route::post('contact' , 'PagesController@sendContact');
+
 
 

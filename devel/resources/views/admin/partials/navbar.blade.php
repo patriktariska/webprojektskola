@@ -6,12 +6,12 @@
         <ul class="nav navbar-nav">
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="{{ asset('dist/img/avatar.png')}}" class="user-image" alt="User Image">
+                    <img src="{{ asset('admin/dist/img/avatar.png')}}" class="user-image" alt="User Image">
                     <span class="hidden-xs">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="user-header">
-                        <img src=" {{ asset('dist/img/avatar.png') }}" class="img-circle" alt="User Image">
+                        <img src=" {{ asset('admin/dist/img/avatar.png') }}" class="img-circle" alt="User Image">
                         <p>
                             {{ Auth::user()->email }}
                             <small>Členom od {{ date('d-m-Y', strtotime(Auth::user()->created_at)) }}</small>
@@ -25,7 +25,7 @@
                                 {{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
+                                {{ csrf_field() }}
                             </form>
                         </div>
                     </li>
