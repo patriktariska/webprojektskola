@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-6 col-xl-2">
-                <h1 class="mb-0"><a href="{{ url('/') }}" class="text-black h2 mb-0">UKF</a></h1>
+                <a href="{{ url('/') }}" class="text-black h2 mb-0"><img src="{{ asset('public/dist/images/ukf_logo.png') }}" alt="Image" class="img-fluid"></a>
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
@@ -19,7 +19,7 @@
                             <a href="{{ url('/') }}">Domov</a>
                         </li>
                         <li class="has-children">
-                            <a href="destination.html">Destinations</a>
+                            <a href="destination.html">Destinácie</a>
                             <ul class="dropdown">
                                 <li><a href="#">Japan</a></li>
                                 <li><a href="#">Europe</a></li>
@@ -39,10 +39,10 @@
                             <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
                         @endif
                         <li>
-                            <a href="#" class="pl-3 pr-3 text-black"><span class="icon-facebook"></span></a>
+                            <a href="https://www.facebook.com/UKFvNitre/" class="pl-3 pr-3 text-black" target="_blank"><span class="icon-facebook"></span></a>
                         </li>
                         <li>
-                            <a href="#" class="pl-3 pr-3 text-black"><span class="icon-instagram"></span></a>
+                            <a href="https://www.instagram.com/ukfvnitre/?hl=sk" class="pl-3 pr-3 text-black" target="_blank"><span class="icon-instagram"></span></a>
                         </li>
                     </ul>
                 </div>
