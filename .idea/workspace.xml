@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="TP01-7 - frontend">
-      <change afterPath="$PROJECT_DIR$/devel/public/public/dist/images/prednaska.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/devel/public/public/dist/images/skolenie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/devel/public/public/dist/images/staz.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/devel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570961095272</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TP01-7 - frontend">
+      <created>1570986262280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570986262280</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
