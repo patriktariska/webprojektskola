@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/staz.jpeg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/prednaska.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/skolenie.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -163,13 +163,13 @@
 </div> -->
 
 
-<div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_2.jpg); background-attachment: fixed;">
+<div class="site-blocks-cover overlay inner-page-cover" style="background-image: url({{ asset('public/dist/images/cesko.jpg') }}); background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
             <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
-                <h2 class="text-white font-weight-light mb-5 h1">Experience Our Outstanding Services</h2>
+                <a href="https://www.youtube.com/watch?v=mucLl6Btdyk" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
+                <h2 class="text-white font-weight-light mb-5 h1">Video účastníkov mobilít Erasmus+</h2>
 
             </div>
         </div>
@@ -201,9 +201,11 @@
                 <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
                     <div>
-                        <h3>Cruises</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <h3>Cestovanie</h3>
+                        <p>Toto je asi jednoznačné. Môžeš cestovať! A pomerne veľa! Okrem toho, že budeš môcť neznámu krajinu volať domovom a preskúmavať
+                            ju s domácimi, takmer na každej škole zapojenej do programu funguje ESN (Erasmus Student Network). ESN organizuje kopec výletov,
+                            spoznávacích zájazdov, stretnutí s ostatnými erasmákmi a rozličné párty.</p>
+                        <p><a href="#"><span class="icon-arrow-right"></a></p>
                     </div>
                 </div>
             </div>
@@ -211,9 +213,11 @@
                 <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4"><span class="text-primary flaticon-route"></span></div>
                     <div>
-                        <h3>Tour Packages</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <h3>Škola</h3>
+                        <p>Napriek tomu, že budeš v zahraničí na dlhšiu dobu, nemusíš prerušiť štúdium a prichádzať tak o vzácny čas a peniaze.
+                            Stačí, ak si na zahraničnej univerzite nájdeš predmety, ktorých obsah bude korešpondovať aspoň sčasti s obsahom
+                            predmetov, ktoré sa v tom čase budú vyučovať u vás doma.</p>
+                        <p><a href="#"><span class="icon-arrow-right"></a></p>
                     </div>
                 </div>
             </div>
@@ -223,9 +227,13 @@
                 <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
                     <div>
-                        <h3>Hotel Accomodations</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <h3>Nové Priateľstvá</h3>
+                        <p>Cudzie prostredie je pre vás všetkých spoločná novinka a tak sa džungľou neznáma boríte spolu. Bývate spolu,
+                            pijete spolu, jedávate spolu, učíte sa pozdraviť (a nadávať) v pomaly každom európskom jazyku, cestujete spolu
+                            (odporúčam prenajímať si auto a určite využite Airbnb) a skrze to všetko budujete vzťahy aké nikdy predtým ani
+                            potom nezažijete. Naozaj sa netreba ľudí báť, priateľov si nájdeš, len sa netreba báť urobiť prvý krok
+                            a povedať Hey!</p>
+                        <p><a href="#"><span class="icon-arrow-right"></a></p>
                     </div>
                 </div>
             </div>
@@ -233,9 +241,11 @@
                 <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
                     <div>
-                        <h3>Sea Explorations</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <h3>Nová Kultúra</h3>
+                        <p>Áno, na dovolenkách si už skúsil všeličo, ale nič nikdy nenahradí dlhodobý pobyt v cudzej krajine, kde sa staneš na chvíľu domácim.
+                            Nová kuchyňa, nový jazyk, úplne nová mentalita ľudí, to všetko môže znieť odstrašujúco, no v skutočnosti je to nádherná škola
+                            života, a je to zaiste najlepší spôsob spoznávania krajiny.</p>
+                        <p><a href="#"><span class="icon-arrow-right"></a></p>
                     </div>
                 </div>
             </div>
@@ -243,9 +253,10 @@
                 <div class="unit-4 d-flex">
                     <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ski"></span></div>
                     <div>
-                        <h3>Ski Experiences</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <h3>Cudzí Jazyk</h3>
+                        <p>Keď si nútený/á komunikovať v cudzom jazyku, tak je prirodzené, že sa v ňom aj zlepšíš.
+                            &Koľko jazykov predsa vieš, toľkokrát si človekom!</p>
+                        <p><a href="#"><span class="icon-arrow-right"></a></p>
                     </div>
                 </div>
             </div>
