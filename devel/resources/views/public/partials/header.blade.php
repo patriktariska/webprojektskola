@@ -29,6 +29,8 @@
                         </li>
                         <li><a href="{{ url('about') }}">O nás</a></li>
                         <li><a href="{{ url('contact') }}">Kontakt</a></li>
+                        <li><a href="{{ url('feedback') }}">Feedback</a></li>
+                        <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white">Prihlás sa</a></li>
                     </ul>
                 </nav>
             </div>

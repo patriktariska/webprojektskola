@@ -42,9 +42,11 @@
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpunit/phpunit-mock-objects" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/sebastian/comparator" />

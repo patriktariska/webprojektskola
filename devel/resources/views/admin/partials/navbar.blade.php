@@ -31,9 +31,6 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href=""><i class="fa fa-gears"></i> Nastavenie</a>
-            </li>
         </ul>
     </div>
 </nav>
