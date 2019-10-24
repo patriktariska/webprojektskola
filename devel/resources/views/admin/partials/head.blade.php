@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="{{ asset('admin/bower_components/font-awesome/css/font-awesome.min.css') }}">
 <!-- Ionicons -->
 <link rel="stylesheet" href="{{ asset('admin/bower_components/Ionicons/css/ionicons.min.css') }}">
+<!-- DataTables -->
+<link rel="stylesheet" href="{{ asset('admin/datatables-bs4/css/dataTables.bootstrap4.css') }}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset('admin/dist/css/AdminLTE.min.css') }}">
 <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
