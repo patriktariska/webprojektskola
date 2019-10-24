@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="TP01-7 - frontend">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/devel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php" afterDir="false" />
+    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="TP01-33 - Pridávanie škôl v admin rozhraní">
       <change beforePath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,7 +158,7 @@
       <workItem from="1571751230319" duration="924000" />
       <workItem from="1571901542797" duration="3542000" />
       <workItem from="1571920807871" duration="2023000" />
-      <workItem from="1571925525814" duration="1531000" />
+      <workItem from="1571925525814" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="Implementation Laravel 5.5.*">
       <created>1569933350610</created>
@@ -193,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570986262280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TP01-33 - Pridávanie škôl v admin rozhraní">
+      <created>1571927169522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571927169522</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +233,7 @@
     <MESSAGE value="Auth, Public &amp; Admin front - end templates (blade system implementation)" />
     <MESSAGE value="TP01-7 - frontend" />
     <MESSAGE value="TP01-18 Tvorba modelov, kontrolerov, feedback studentov, uprava dashboardu, uprava Admin profilu" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP01-18 Tvorba modelov, kontrolerov, feedback studentov, uprava dashboardu, uprava Admin profilu" />
+    <MESSAGE value="TP01-33 - Pridávanie škôl v admin rozhraní" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP01-33 - Pridávanie škôl v admin rozhraní" />
   </component>
 </project>
