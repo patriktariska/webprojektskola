@@ -12,7 +12,7 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3></h3>
+                        <h3>{{ $countSchool }}</h3>
                         <p>Evidovaných škôl</p>
                     </div>
                     <div class="icon">
@@ -27,7 +27,7 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3></h3>
+                        <h3>{{ $countMobility }}</h3>
 
                         <p>Evidovaných mobilít</p>
                     </div>
@@ -43,7 +43,7 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3></h3>
+                        <h3>{{ $countFeedback }}</h3>
 
                         <p>Študentských feedbackov</p>
                     </div>

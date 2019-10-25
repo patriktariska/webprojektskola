@@ -17,9 +17,9 @@ Auth::routes();
  ///      Admin ROUTE         ///
 ////////////////////////////////
 
-Route::prefix('dashboard')->group(function () {
+Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function () {
     /*Index page route*/
-    Route::get('/', 'HomeController@index')->name('dashboard');
+    Route::get('/', 'Admin\PagesController@index')->name('dashboard');
 
     /*Feedback page route*/
     Route::get('/feedback', 'Admin\FeedbackController@index');

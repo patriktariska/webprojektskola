@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'lname',
     ];
 
     /**
@@ -26,4 +26,30 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // Relations
+    public function Roles(){
+        return $this->belongsToMany('App\Role')->withTimestamps();
+    }
+    public function Feedback(){
+        return $this->$this->hasMany('App\Feedback');
+    }
+
+    // Method Roles Permisions
+    public function hasAnyRoles($roles){
+        return null !== $this->Roles()->whereIn('name', $roles)->first();
+    }
+    public function hasAnyRole($role){
+        return null !== $this->Roles()->where('name', $role)->first();
+    }
+    public function isAdmin()
+    {
+        foreach ($this->Roles()->get() as $role)
+        {
+            if ($role->name == 'admin' || $role->name == 'devel')
+            {
+                return true;
+            }
+        }
+    }
 }
