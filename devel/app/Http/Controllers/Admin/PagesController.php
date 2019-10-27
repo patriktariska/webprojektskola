@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Feedback;
+use App\Mobility;
+use App\School;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -12,6 +15,14 @@ class PagesController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $countSchool = School::count();
+        $countMobility = Mobility::count();
+        $countFeedback = Feedback::count();
+        return view('admin.pages.index', compact('countSchool' ,'countMobility', 'countFeedback'));
     }
 
     // Profile Page //

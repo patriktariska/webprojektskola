@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Mail;
 use App\Student;
@@ -13,7 +14,7 @@ class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
-        $feedback = Feedback::with('Student')->get();
+        $feedback = Feedback::with('Student')->where('published', true)->get();
         //return response()->json($feedback);
         return view('public.pages.index', compact('feedback'));
     }
@@ -32,23 +33,13 @@ class PagesController extends Controller
 
     public function sendFeedback(Request $request){
         $this->validate($request, [
-            'fname' => 'required',
-            'lname' => 'required',
             'program' => 'required',
             'rate' => 'required',
-            'email' => 'required|email',
             'comment' => 'min:5'
         ], [
-                'subject.required' => 'Subjekt správy je povinný.',
-                'email.required' => 'Email je povinný.',
                 'message.min' => 'Správa je príliž krátka.'
             ]
         );
-        $student = new Student();
-            $student->fname = $request->fname;
-            $student->lname = $request->lname;
-            $student->email = $request->email;
-            $student->save();
 
             $feedback = new Feedback();
             $image = $request->file('myFile');
@@ -59,7 +50,7 @@ class PagesController extends Controller
             $feedback->photo = $filename;
             $feedback->comment = $request->message;
             $feedback->rate = $request->rate;
-            $feedback->student_id = $student->id;
+            $feedback->user_id = $request->user_id;
             $feedback->save();
 
         return view('public.pages.feedback');

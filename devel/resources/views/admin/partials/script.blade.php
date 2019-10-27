@@ -2,10 +2,13 @@
 <script src="{{ asset('admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ asset('admin/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('admin/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
-
 <script src="{{ asset('admin/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+
 <script type="text/javascript">
     $( document ).ready(function() {
         $('#country').change(function () {
@@ -54,6 +57,21 @@
                 $("#city").empty();
             }
 
+        });
+    });
+</script>
+
+<!-- page script -->
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
         });
     });
 </script>
