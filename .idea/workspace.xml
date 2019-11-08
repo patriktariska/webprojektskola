@@ -1,27 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="TP01-18 Tvorba modelov, kontrolerov, feedback studentov, uprava dashboardu, uprava Admin profilu">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="ed3380e2-84c7-40cb-8eb2-a657db9d79f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/android-add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/battery-low.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/chatbubbles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/close-round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/film-marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/information.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-albums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-cloudy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-expand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-filing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-keypad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-locked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-medkit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-people.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-person.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-photos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/ios7-reload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/thumbsdown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/university.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/png/512/volume-low.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webprojektskola.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webprojektskola.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/Feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Feedback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/FeedbackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/FeedbackController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/MobilityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/MobilityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/SchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/SchoolController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/School.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/School.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/devel/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/devel/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/database/migrations/2019_10_19_121134_create_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/database/migrations/2019_10_19_121134_create_schools_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/database/migrations/2019_10_20_075130_create_feedback_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/database/migrations/2019_10_20_075130_create_feedback_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/database/seeds/CitiesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/database/seeds/CitiesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/pages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/.bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/AUTHORS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/AUTHORS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/dist/jquery.slim.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/external/sizzle/dist/sizzle.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/ajax/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/ajax/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core/DOMEval.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core/DOMEval.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core/var/rsingleTag.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/core/var/rsingleTag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/adjustCSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/adjustCSS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/curCSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/curCSS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/support.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/var/isHiddenWithinTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/var/isHiddenWithinTree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/effects/Tween.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/effects/Tween.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/_evalUrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/_evalUrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/buildFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/buildFragment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/var/rtagName.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/manipulation/var/rtagName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/serialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/serialize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/traversing.js" beforeDir="false" afterPath="$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/traversing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables-bs4/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables-bs4/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables-bs4/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables-bs4/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/public/admin/datatables/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/pages/feedback.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/pages/feedback.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/pages/mobility.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/pages/mobility.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/public/pages/connect.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/pages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/public/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/partials/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/resources/views/public/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devel/resources/views/public/partials/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/resources/views/public/partials/script.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/devel/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +105,49 @@
       <executable />
     </execution>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-389">
+              <caret line="361" column="47" selection-start-line="361" selection-start-column="47" selection-end-line="361" selection-end-column="47" />
+              <folding>
+                <element signature="e#137#144#1" expanded="true" />
+                <element signature="e#137#144#1" expanded="true" />
+                <element signature="e#139#146#1" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#137#144#1" expanded="true" />
+                <element signature="e#137#144#1" expanded="true" />
+                <element signature="e#139#146#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/devel/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#6#21#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/feedback.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -43,8 +155,52 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data ta</find>
+      <find>Data Table With Full Features</find>
+      <find>CK ed</find>
+      <find>select</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/Desktop/Skola Projekt/Themes/AdminLTE-master/AdminLTE-master/pages/tables/data.html" />
+        <option value="$PROJECT_DIR$/devel/resources/views/public/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/public/partials/head.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/public/partials/script.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/public/pages/myfeedback.blade.php" />
+        <option value="$PROJECT_DIR$/devel/config/app.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/pages/mobility.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/pages/crud/mobility/mobility.create.blade.php" />
+        <option value="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/MobilityController.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/pages/extension/mobility/create.blade.php" />
+        <option value="$PROJECT_DIR$/devel/app/Http/Controllers/PagesController.php" />
+        <option value="$PROJECT_DIR$/devel/database/migrations/2019_10_20_075130_create_feedback_table.php" />
+        <option value="$PROJECT_DIR$/devel/database/seeds/FeedbacksTableSeeder.php" />
+        <option value="$PROJECT_DIR$/devel/database/seeds/SchoolsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/PagesController.php" />
+        <option value="$PROJECT_DIR$/devel/app/User.php" />
+        <option value="$PROJECT_DIR$/devel/app/Feedback.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php" />
+        <option value="$PROJECT_DIR$/devel/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/devel/database/seeds/CitiesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/devel/database/migrations/2019_10_19_121134_create_schools_table.php" />
+        <option value="$PROJECT_DIR$/devel/app/School.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php" />
+        <option value="$PROJECT_DIR$/devel/routes/web.php" />
+        <option value="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/FeedbackController.php" />
+        <option value="$PROJECT_DIR$/devel/app/Http/Controllers/Admin/SchoolController.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php" />
+        <option value="$PROJECT_DIR$/devel/resources/views/admin/pages/feedback.blade.php" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,6 +287,18 @@
       <path value="$PROJECT_DIR$/devel/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/devel/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/devel/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/devel/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/devel/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/devel/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/devel/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables-oracle" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables-html" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables-fractal" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables-editor" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables-buttons" />
+      <path value="$PROJECT_DIR$/devel/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/devel/vendor/league/fractal" />
+      <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -158,6 +326,113 @@
               <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
               <item name="devel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="extension" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webprojektskola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webprojektskola" type="462c0819:PsiDirectoryNode" />
+              <item name="devel" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -170,9 +445,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Laravelbee_web_Project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\webprojektskola\devel\public\admin" />
+      <recent name="C:\xampp\htdocs\webprojektskola\devel\public" />
+      <recent name="C:\xampp\htdocs\webprojektskola\devel\public\admin\bower_components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\webprojektskola\devel\public\admin\bower_components" />
+      <recent name="C:\xampp\htdocs\webprojektskola\devel\public\admin" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -205,6 +492,18 @@
       <workItem from="1570788508226" duration="865000" />
       <workItem from="1570954572855" duration="6553000" />
       <workItem from="1571737463743" duration="830000" />
+      <workItem from="1572064515254" duration="13210000" />
+      <workItem from="1572088909456" duration="4680000" />
+      <workItem from="1572162341723" duration="6459000" />
+      <workItem from="1572179392168" duration="5709000" />
+      <workItem from="1572242011259" duration="15711000" />
+      <workItem from="1572326912089" duration="4799000" />
+      <workItem from="1572416984192" duration="13161000" />
+      <workItem from="1572680200721" duration="624000" />
+      <workItem from="1572883649792" duration="1857000" />
+      <workItem from="1572932270765" duration="3845000" />
+      <workItem from="1572945794737" duration="1289000" />
+      <workItem from="1573199872126" duration="1355000" />
     </task>
     <task id="LOCAL-00001" summary="Implementation Laravel 5.5.*">
       <created>1569933350610</created>
@@ -234,23 +533,25 @@
       <option name="project" value="LOCAL" />
       <updated>1570986262280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TP01-35 Implementácia rol k Userom&#10;TP01-36 Vytvorenie feedback stránky (formulára) pre Users&#10;TP01-37 Seeder pre cvičné dáta v tabuľke Users">
+      <created>1572022161596</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572022161596</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="830000" />
+    <option name="totallyTimeSpent" value="74892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30862328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -258,11 +559,37 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -305,6 +632,359 @@
     <MESSAGE value="Auth, Public &amp; Admin front - end templates (blade system implementation)" />
     <MESSAGE value="TP01-7 - frontend" />
     <MESSAGE value="TP01-18 Tvorba modelov, kontrolerov, feedback studentov, uprava dashboardu, uprava Admin profilu" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP01-18 Tvorba modelov, kontrolerov, feedback studentov, uprava dashboardu, uprava Admin profilu" />
+    <MESSAGE value="TP01-35 Implementácia rol k Userom&#10;TP01-36 Vytvorenie feedback stránky (formulára) pre Users&#10;TP01-37 Seeder pre cvičné dáta v tabuľke Users" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP01-35 Implementácia rol k Userom&#10;TP01-36 Vytvorenie feedback stránky (formulára) pre Users&#10;TP01-37 Seeder pre cvičné dáta v tabuľke Users" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/pages/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/public/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/public/admin/bower_components/Ionicons/css/ionicons.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/public/admin/bower_components/datatables.net/js/jquery.dataTables.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/public/admin/bower_components/jquery/src/css/var/swap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Skola Projekt/Themes/AdminLTE-master/AdminLTE-master/pages/tables/data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1626" selection-start-line="1626" selection-end-line="1638" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/pages/feedback.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/partials/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/partials/script.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/public/pages/myfeedback.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="172" selection-start-line="6" selection-start-column="172" selection-end-line="6" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/crud/mobility/mobility.create.blade.php" />
+    <entry file="file://$USER_HOME$/Desktop/Skola Projekt/Themes/AdminLTE-master/AdminLTE-master/pages/forms/editors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9299">
+          <caret line="547" column="12" selection-start-line="547" selection-start-column="12" selection-end-line="547" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/extension/mobility/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/extension/mobility/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/extension/mobility/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding>
+            <element signature="e#310#316#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/migrations/2019_10_19_160413_create_mobilities_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/RolesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Admin/MobilityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/SchoolsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/migrations/2019_10_20_075130_create_feedback_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/FeedbacksTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/partials/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/mobility.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Skola Projekt/Themes/AdminLTE-master/AdminLTE-master/pages/forms/general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="849" column="7" selection-start-line="849" selection-start-column="7" selection-end-line="855" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/migrations/2019_10_19_114049_create_cities_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/seeds/CitiesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822630">
+          <caret line="48390" column="57" selection-start-line="48390" selection-start-column="57" selection-end-line="48390" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/database/migrations/2019_10_19_121134_create_schools_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="18" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/School.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Feedback.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-593">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Admin/FeedbackController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#46#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Admin/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="e#46#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/school.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="85" selection-start-line="116" selection-start-column="85" selection-end-line="116" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/app/Http/Controllers/Admin/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-559">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#46#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/pages/feedback.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#6#21#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devel/resources/views/admin/partials/script.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="361" column="47" selection-start-line="361" selection-start-column="47" selection-end-line="361" selection-end-column="47" />
+          <folding>
+            <element signature="e#137#144#1" expanded="true" />
+            <element signature="e#137#144#1" expanded="true" />
+            <element signature="e#139#146#1" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#137#144#1" expanded="true" />
+            <element signature="e#137#144#1" expanded="true" />
+            <element signature="e#139#146#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

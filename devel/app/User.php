@@ -31,8 +31,8 @@ class User extends Authenticatable
     public function Roles(){
         return $this->belongsToMany('App\Role')->withTimestamps();
     }
-    public function Feedback(){
-        return $this->$this->hasMany('App\Feedback');
+    public function Feeds(){
+        return $this->hasMany('App\Feedback');
     }
 
     // Method Roles Permisions

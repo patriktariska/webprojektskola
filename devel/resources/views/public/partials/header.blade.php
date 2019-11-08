@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="float-right">
-                        <a href="#" class="pl-3 pr-3">Správa Feedbackov</a>
+                        <a href="{{ route('myfeedback') }}" class="pl-3 pr-3">Správa Feedbackov</a>
                         <a href="{{ route('logout') }}" class="pl-3 pr-3"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Odhlásiť
                             sa</a>

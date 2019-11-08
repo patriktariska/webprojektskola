@@ -17,10 +17,8 @@ class CreateFeedbackTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
-            /*   $table->unsignedInteger('_id');
-               $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');*/
-
+/*            $table->unsignedInteger('mobility_id');
+            $table->foreign('mobility_id')->references('id')->on('mobilities')->onDelete('cascade');*/
             $table->string('comment');
             $table->string('photo');
             $table->string('rate');

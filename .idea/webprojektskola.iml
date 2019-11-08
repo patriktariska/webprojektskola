@@ -21,18 +21,24 @@
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/league/fractal" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/maatwebsite/excel" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/markbaker/matrix" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/mtdowling/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/opis/closure" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phar-io/version" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpoffice/phpspreadsheet" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/phpunit/php-file-iterator" />
@@ -84,6 +90,12 @@
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/devel/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables-buttons" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables-editor" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables-fractal" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables-html" />
+      <excludeFolder url="file://$MODULE_DIR$/devel/vendor/yajra/laravel-datatables-oracle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

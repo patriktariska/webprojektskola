@@ -28,7 +28,7 @@ class MobilityController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.extension.mobility.create');
     }
 
     /**

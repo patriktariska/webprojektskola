@@ -8,6 +8,7 @@ use Mail;
 use App\Student;
 use App\Feedback;
 use Image;
+use Auth;
 
 
 class PagesController extends Controller
@@ -30,6 +31,14 @@ class PagesController extends Controller
     {
         return view('public.pages.feedback');
     }
+    public function getMyFeedback()
+    {
+        if(Auth::user()){
+            $feedback = Feedback::where('user_id', Auth::user()->id)->latest()->get();
+            return view('public.pages.myfeedback', compact('feedback'));
+        }
+        return view('public.pages.myfeedback');
+    }
 
     public function sendFeedback(Request $request){
         $this->validate($request, [
@@ -51,9 +60,11 @@ class PagesController extends Controller
             $feedback->comment = $request->message;
             $feedback->rate = $request->rate;
             $feedback->user_id = $request->user_id;
+            $feedback->mobility_id = 0;
             $feedback->save();
 
-        return view('public.pages.feedback');
+        return redirect()->back()
+            ->with('success', 'Vaša správa bola úspešne odoslaná.');
     }
 
     // Contact Page //

@@ -4,9 +4,9 @@
         <h1>
             Mobility
             <small>správa mobilít</small>
-            <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#modal-default">
-                Pridaj Školu
-            </button>
+            <a class="btn btn-app pull-right" href="{{ route('mobility.create') }}">
+                <i class="fa fa-plus"></i> Vytvor záznam mobility
+            </a>
         </h1>
     </section>
     <!-- Main content -->

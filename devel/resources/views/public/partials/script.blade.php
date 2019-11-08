@@ -10,3 +10,5 @@
 <script src="{{ asset('public/dist/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('public/dist/js/aos.js') }}"></script>
 <script src="{{ asset('public/dist/js/main.js') }}"></script>
+
+
