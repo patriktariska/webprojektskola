@@ -36,7 +36,9 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     Route::get('school/{id}/edit', 'Admin\SchoolController@edit')->name('school.edit');
 
     /*Mobility page route*/
-    Route::resource('/mobility', 'Admin\MobilityController');
+    Route::resource('mobility', 'Admin\MobilityController');
+    Route::get('mobility/delete/{id}', 'Admin\MobilityController@destroy')->name('mobility.delete');
+
 
     /*Profile page route*/
     Route::get('profile', 'Admin\PagesController@getProfile')->name('profile.index');
@@ -45,6 +47,10 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     /*State-City JSON route*/
     Route::get('school/get-state-list','Admin\SchoolController@getState');
     Route::get('school/get-city-list','Admin\SchoolController@getCities');
+
+    /*LogActivity route*/
+    Route::get('logs', 'Admin\LogActivityController@logActivity')->name('log.index');
+    Route::get('logs/delete-all', 'Admin\LogActivityController@destroyAll')->name('log.delete-all');
 
 });
 
@@ -55,16 +61,17 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     /*Index page route*/
     Route::get('/', 'PagesController@getIndex');
 
+    Route::get('/mobility/{mobility}', 'PagesController@getMobility')->name('public.mobility.show');
+
     /*About page route*/
-    Route::get('about', 'PagesController@getAbout');
+    Route::get('about', 'PagesController@getAbout')->name('about.index');
 
     /*Feedback page route*/
     Route::get('feed', 'PagesController@getFeedback');
     Route::post('feed', 'PagesController@sendFeedback')->name('send.feedback');
     Route::get('myfeed', 'PagesController@getMyFeedback')->name('myfeedback');
 
-
-/* Contact page route*/
+    /* Contact page route*/
     Route::get('contact', 'PagesController@getContact');
     Route::post('contact' , 'PagesController@sendContact');
 

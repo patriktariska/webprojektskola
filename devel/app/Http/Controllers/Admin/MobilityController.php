@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Feedback;
+use App\Helpers\LogActivity;
+use App\Mobility;
+use App\School;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Image;
 
 class MobilityController extends Controller
 {
@@ -11,79 +16,89 @@ class MobilityController extends Controller
     {
         $this->middleware('auth');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
+        if (request()->ajax()) {
+            return datatables()->of(Mobility::with('School')->get())
+                ->addColumn('action', function ($row) {
+                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip" 
+                    data-id="' . $row->id . '" class="btn btn-xs btn-primary showItem">
+                    <i class="fa fa-info-circle"></i></a>';
+                    $btn2 = '<a href="javascript:void(0)" data-toggle="tooltip" 
+                     data-id="' . $row->id . '" data-original-title="Edit" 
+                     class="edit btn btn-xs btn-warning edit-mobility"><i class="fa fa-edit"></i></a>';
+                    $btn = $btn . ' ' . $btn2 . ' <a href="javascript:void(0)" data-toggle="tooltip" 
+                     data-id="' . $row->id . '" data-original-title="Delete" id="delete-mobility"
+                      class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
+
+        LogActivity::addToLog('Mobility index');
         return view('admin.pages.mobility');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('admin.pages.extension.mobility.create');
+        $school = School::get();
+        return view('admin.pages.extension.mobility.create', compact('school'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $mobility = new Mobility();
+        $image = $request->file('myFile');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        Image::make($image)->resize(500, 500)->
+        save(public_path('/admin/mobility/' . $filename));
+        $mobility->title_photo = $filename;
+
+        $mobility->school_id = $request->input('school_id');
+        $mobility->name = $request->input('name');
+        $mobility->type = $request->input('type');
+        $mobility->capacity = $request->input('capacity');
+        $mobility->description = $request->input('description');
+        $mobility->start = $request->input('start');
+        $mobility->end = $request->input('end');
+        $mobility->save();
+
+        LogActivity::addToLog('Pridanie novej mobility');
+        return redirect()->route('mobility.index')->with('Success', 'Úspešne zaevidovaná mobilita');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(Mobility $mobility)
     {
-        //
+        $getMobilities = Mobility::where('id', '=', $mobility->id)->with('School')->first();
+        $getFeedback = Feedback::where('mobility_id', '=', $mobility->id)->with('Student')->get();
+
+        LogActivity::addToLog('Zobrazenie detailu mobility');
+        return view('admin.pages.extension.mobility.show', compact('getMobilities', 'getFeedback'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Mobility $mobility)
     {
-        //
+        $selectedID = $mobility->id;
+        $getMobility = Mobility::where('id', $mobility->id)->first();
+        $school = School::get();
+
+        return view('admin.pages.extension.mobility.edit', compact('getMobility', 'school', 'selectedID'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        LogActivity::addToLog('Úprava mobility');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $mobility = Mobility::where('id', $id)->delete();
+
+        LogActivity::addToLog('Zmazanie mobility');
+        return response()->json($mobility);
     }
 }

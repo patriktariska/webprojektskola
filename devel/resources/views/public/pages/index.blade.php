@@ -60,30 +60,16 @@
     <div class="site-section">
         <div class="container overlap-section">
             <div class="row">
+                @foreach($newMobilities as $newMobilities)
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
                     <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ asset('admin/mobility') }}/{{ $newMobilities->title_photo }}" alt="Image" class="img-fluid">
                         <div class="unit-1-text">
-                            <h3 class="unit-1-heading">Write Down Your Experience</h3>
+                            <h3 class="unit-1-heading">{{ $newMobilities->name }}</h3>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <h3 class="unit-1-heading">Explore Asian Mountains</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <h3 class="unit-1-heading">Safe Trip With Airasia</h3>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -97,71 +83,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$590</strong>
-                            <h3 class="unit-1-heading">Santorini, Greece</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$390</strong>
-                            <h3 class="unit-1-heading">Rome, Italy</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}"alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$390</strong>
-                            <h3 class="unit-1-heading">Mount Fuji, Japan</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$320</strong>
-                            <h3 class="unit-1-heading">Camels, Dubai</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$290</strong>
-                            <h3 class="unit-1-heading">Elizabeth Tower, London</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <strong class="text-primary mb-2 d-block">$390</strong>
-                            <h3 class="unit-1-heading">Opera House, Australia</h3>
-                        </div>
-                    </a>
-                </div>
+                @foreach($mobilities as $Mobilities)
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="{{ route('public.mobility.show',$Mobilities->id) }}" class="unit-1 text-center">
+                            <img src="{{ asset('admin/mobility') }}/{{ $Mobilities->title_photo }}" alt="Image" class="img-fluid">
+                            <div class="unit-1-text">
+                                <h3 class="unit-1-heading">{{ $Mobilities->name }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-
-
-
     <!-- <div class="site-section bg-light">
     </div> -->
-
-
     <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url({{ asset('public/dist/images/cesko.jpg') }}); background-attachment: fixed;">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">

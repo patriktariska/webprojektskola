@@ -9,7 +9,7 @@
 
             <li class="header">Manažment</li>
             <li class="{{ request()->is('dashboard/profile') ? 'active' : '' }}"><a href="{{ url('/dashboard/profile') }}"><i class="fa fa-gears"></i><i class="fa fa-circle-o text-aqua pull-right"></i><span>Profil</span></a></li>
-            <li class="{{ request()->is('') ? 'active' : '' }}"><a href=""><i class="fa fa-leaf"></i><i class="fa fa-circle-o text-orange pull-right"></i><span>Logy</span></a></li>
+            <li class="{{ request()->is('dashboard/logs') ? 'active' : '' }}"><a href="{{ url('/dashboard/logs') }}"><i class="fa fa-leaf"></i><i class="fa fa-circle-o text-orange pull-right"></i><span>Logy</span></a></li>
         </ul>
     </section>
 </aside>

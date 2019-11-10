@@ -15,6 +15,15 @@ class CreateMobilitiesTable extends Migration
     {
         Schema::create('mobilities', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('school_id');
+            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+            $table->string('name');
+            $table->string('type');
+            $table->string('description');
+            $table->string('capacity');
+            $table->date('start');
+            $table->date('end');
+            $table->string('title_photo');
             $table->timestamps();
         });
     }

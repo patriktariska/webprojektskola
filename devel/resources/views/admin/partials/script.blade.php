@@ -17,9 +17,8 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 
-
 <script type="text/javascript">
-    $( document ).ready(function() {
+    $(document).ready(function () {
         $('#country').change(function () {
             var countryID = $(this).val();
             if (countryID) {
@@ -320,7 +319,7 @@
                     name: 'published',
                     render: function (published) {
                         if(published == 0)
-                        return '<div class="badge bg-red">Nepublikovaný</div>'
+                            return '<div class="badge bg-red">Nepublikovaný</div>'
                         else return '<div class="badge bg-green">Publikovaný</div>'
                     }
                 },
@@ -330,6 +329,7 @@
             ],
             order: [[0, 'desc']],
         });
+
         //AJAX DELETE FEEDBACK
         $('body').on('click', '#delete-feedback', function () {
             var feedback_id = $(this).data("id");
@@ -352,61 +352,164 @@
             });
         });
 
-        //AJAX EDIT FEEDBACK
-        $('body').on('click', '.edit-feedback', function () {
-            var feedback_id = $(this).data('id');
-            $.get('feedback/' + feedback_id + '/edit', function (data) {
-                $('#feedbackCrudModal').html("Publikuj feedback");
-                $('#btn-save').val("edit-feedback");
-                $('#ajax-feedback').modal('show');
-                $('#feedback_id').val(data.id);
-                $('.published').bootstrapToggle('on');
 
-            })
-        });
-        //UPDATE BUTTON EVENT
-        if ($("#feedbackForm").length > 0) {
-            $("#feedbackForm").validate({
-                submitHandler: function (form) {
-                    var actionType = $('#btn-save').val();
-                    $('#btn-save').html('Pridávam ...');
-                    $.ajax({
-                        data: $('#feedbackForm').serialize(),
-                        url: "{{ route('feedback.update') }}",
-                        type: "POST",
-                        dataType: 'json',
-                        success: function (data) {
-                            $('#feedbackForm').trigger("reset");
-                            $('#ajax-feedback').modal('hide');
-                            $('#btn-save').html('Uprav záznam');
-                            var oTable = $('#feedback_datatable').dataTable();
-                            oTable.fnDraw(false);
-                            $('#message-success').html('<div class="alert alert-dismissible callout callout-success">' +
-                                '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-                                '<h4><i class="icon fa fa-check"></i> Výborne!</h4>Záznam školy bol úspešne upravený.</div>');
-                        },
-                        error: function (data) {
-                            var errors = data.responseText;
-
-                            errors = JSON.parse(errors);
-                            errors = errors.errors;
-                            var string = '';
-
-                            Object.keys(errors).forEach(function (item) {
-                                errors[item].forEach(function (value) {
-                                    string += value + '<br>';
-                                })
-                            });
-
-                            $('#message-danger').html('   <div class="alert alert-dismissible callout callout-danger">' +
-                                '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-                                '<h4><i class="icon fa fa-check"></i>Chyba</h4>' + string +
-                                '</div>');
-                            $('#btn-save').html('Pridaj');
-                        }
-                    });
-                }
-            })
-        }
     });
+</script>
+<script>
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        //AJAX SHOW SCHOOL
+        var table = $('#mobility_datatable').DataTable({
+            responsive: true,
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('mobility.index') }}",
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5]
+                    }
+                },
+            ],
+            columns: [
+                {data: 'id', name: 'id', 'visible': false},
+                {data: 'name', name: 'name'},
+                {data: 'school.name', name: 'school.name'},
+                {data: 'type', name: 'type'},
+                {data: 'start', name: 'start'},
+                {data: 'end', name: 'end'},
+                {data: 'created_at', name: 'created_at',},
+                {data: 'action', name: 'action', orderable: false},
+
+            ],
+            order: [[0, 'desc']],
+        });
+        //SHOW MOBILITIES
+        $(document).on('click', '.showItem', function (event) {
+            var mobility_id = $(this).data('id');
+            event.preventDefault();
+            window.location = window.location + '/' + mobility_id;
+        });
+
+        //EDIT MOBILITIES
+        $(document).on('click', '.edit-mobility', function (event) {
+            var mobility_id = $(this).data('id');
+            event.preventDefault();
+            window.location = window.location + '/' + mobility_id+ '/edit';
+        });
+
+        //AJAX DELETE Mobility
+        $('body').on('click', '#delete-mobility', function () {
+            var mobility_id = $(this).data("id");
+
+            confirm("Želáte si zmazať vybranú mobilitu ?");
+            $.ajax({
+                type: "GET",
+                url: "mobility/delete/" + mobility_id,
+                success: function (data) {
+                    var oTable = $('#mobility_datatable').dataTable();
+                    oTable.fnDraw(false);
+                    $('#message-success').html('<div class="alert alert-dismissible callout callout-success">' +
+                        '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                        '<h4><i class="icon fa fa-check"></i> Výborne!</h4>Mobilita bola zmazaná. </div>');
+                },
+                error: function (data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        //ACTIVITY LOGS
+        $('#logs_datatable').DataTable({
+            serverSide: true,
+            processing: true,
+            responsive: true,
+            ajax: "{{ route('log.index') }}",
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8 ]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8 ]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8 ]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8 ]
+                    }
+                },
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8 ]
+                    }
+                },
+            ],
+            columns: [
+                {data: 'id', name: 'id', 'visible': false},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
+                {data: 'user.email', name: 'email'},
+                {data: 'subject', name: 'subject'},
+                {data: 'url', name: 'url'},
+                {data: 'method', name: 'method'},
+                {data: 'ip', name: 'ip'},
+                {data: 'agent', name: 'agent'},
+                {data: 'created_at', name: 'created_at'},
+            ],
+            order: [[0, 'desc']],
+        });
+    });
+
 </script>

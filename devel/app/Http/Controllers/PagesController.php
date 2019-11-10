@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mobility;
 use App\User;
 use Illuminate\Http\Request;
 use Mail;
@@ -15,9 +16,11 @@ class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
+        $newMobilities = Mobility::with('School')->orderBy('created_at', 'desc')->take(3)->get();
+        $mobilities = Mobility::with('School')->orderBy('created_at', 'desc')->get();
         $feedback = Feedback::with('Student')->where('published', true)->get();
         //return response()->json($feedback);
-        return view('public.pages.index', compact('feedback'));
+        return view('public.pages.index', compact('feedback', 'newMobilities', 'mobilities'));
     }
 
     // About Page //
@@ -26,10 +29,17 @@ class PagesController extends Controller
         return view('public.pages.about');
     }
 
+    // Mobility Page //
+    public function getMobility($id){
+        $getMobility = Mobility::with('School')->where('id' , $id)->first();
+        return view('public.pages.extension.mobility.show', compact('getMobility'));
+    }
+
     // Feedback Page //
     public function getFeedback()
     {
-        return view('public.pages.feedback');
+        $getMobility = Mobility::get();
+        return view('public.pages.feedback', compact('getMobility'));
     }
     public function getMyFeedback()
     {
@@ -42,7 +52,6 @@ class PagesController extends Controller
 
     public function sendFeedback(Request $request){
         $this->validate($request, [
-            'program' => 'required',
             'rate' => 'required',
             'comment' => 'min:5'
         ], [
@@ -57,10 +66,10 @@ class PagesController extends Controller
             save(public_path('/feedback/' . $filename));
 
             $feedback->photo = $filename;
-            $feedback->comment = $request->message;
-            $feedback->rate = $request->rate;
-            $feedback->user_id = $request->user_id;
-            $feedback->mobility_id = 0;
+            $feedback->comment = $request->input('message');
+            $feedback->rate = $request->input('rate');
+            $feedback->user_id = $request->input('user_id');
+            $feedback->mobility_id = $request->input('mobility_id');
             $feedback->save();
 
         return redirect()->back()

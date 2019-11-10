@@ -14,7 +14,7 @@ class Feedback extends Model
     ];
 
     // Relation
-    public function Mobilities(){
+    public function Mobility(){
         return $this->belongsTo('App\Mobility');
     }
 

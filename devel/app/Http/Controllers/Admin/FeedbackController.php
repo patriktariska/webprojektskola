@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Feedback;
+use App\Helpers\LogActivity;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -32,7 +33,7 @@ class FeedbackController extends Controller
                 ->addIndexColumn()
                 ->make(true);
         }
-
+        LogActivity::addToLog('Feedback index');
         return view('admin.pages.feedback');
     }
 
@@ -54,12 +55,15 @@ class FeedbackController extends Controller
                'published' => $request->input('published')
             ]);
 
+        LogActivity::addToLog('Úprava status feedbacku');
         return response()->json($feedback);
     }
 
     public function destroy($id)
     {
         $feedback = Feedback::where('id', $id)->delete();
+
+        LogActivity::addToLog('Zmazanie feedbacku');
         return response ()->json ($feedback);
     }
 }

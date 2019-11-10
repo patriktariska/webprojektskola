@@ -18,7 +18,7 @@
                     <div class="icon">
                         <i class="fa fa-archive"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{ route('school.index') }}" class="small-box-footer">
                         Pozri viac <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="icon">
                         <i class="fa fa-cubes"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{ route('mobility.index') }}" class="small-box-footer">
                         Pozri viac <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="icon">
                         <i class="fa fa-chain"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{ route('feedback.index') }}" class="small-box-footer">
                         Pozri viac <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -59,14 +59,14 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3></h3>
+                        <h3>{{ $countLogs }}</h3>
 
                         <p>Logovanie systému</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-unlink"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{ route('log.index') }}" class="small-box-footer">
                         Pozri viac <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -80,6 +80,7 @@
                         <h3 class="box-title">Graf feedbackov</h3>
                     </div>
                     <div class="box-body">
+                        {!! $chart->container() !!}
                     </div>
                 </div>
             </div>
@@ -89,6 +90,7 @@
                         <h3 class="box-title">Graf mobilít</h3>
                     </div>
                     <div class="box-body">
+                        {!! $chart2->container() !!}
                     </div>
                 </div>
             </div>
@@ -100,13 +102,29 @@
                     <h3 class="box-title">Status správcov webu</h3>
                 </div>
                 <div class="box-body">
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-hover">
                         <tr>
                             <th>Meno</th>
                             <th>Priezvisko</th>
                             <th>Email</th>
+                            <th>Vytvorený</th>
                             <th>Status</th>
                         </tr>
+                        @foreach ($user as $User)
+                            <tr>
+                                <td>{{ $User->name }}</td>
+                                <td>{{ $User->lname }}</td>
+                                <td>{{ $User->email }}</td>
+                                <td>{{ date('d.m.Y', strtotime($User->created_at)) }}</td>
+                                <td>@if ($User->isOnline())
+                                        <li class="text-green">Online</li>
+                                    @else
+                                        <li class="text-red">Offline</li>
+                                    @endif
+                                </td>
+                            </tr>
+
+                        @endforeach
 
                     </table>
 
@@ -115,4 +133,8 @@
         </div>
 
     </section>
+    {!! $chart->script() !!}
+    {!! $chart2->script() !!}
+    <!-- Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 @endsection

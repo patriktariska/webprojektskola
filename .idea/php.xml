@@ -97,6 +97,8 @@
       <path value="$PROJECT_DIR$/devel/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/devel/vendor/league/fractal" />
       <path value="$PROJECT_DIR$/devel/vendor/yajra/laravel-datatables" />
+      <path value="$PROJECT_DIR$/devel/vendor/balping/json-raw-encoder" />
+      <path value="$PROJECT_DIR$/devel/vendor/consoletvs/charts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

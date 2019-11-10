@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\LogActivity;
 use App\School;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,7 +26,7 @@ class SchoolController extends Controller
                     $btn = '<a href="javascript:void(0)" data-toggle="tooltip" 
                      data-id="' . $row->id . '" data-original-title="Edit" 
                      class="edit btn btn-xs btn-warning edit-school"><i class="fa fa-edit"></i></a>';
-                    $btn = $btn. ' <a href="javascript:void(0)" data-toggle="tooltip" 
+                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip" 
                      data-id="' . $row->id . '" data-original-title="Delete" id="delete-school"
                       class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>';
                     return $btn;
@@ -35,7 +36,9 @@ class SchoolController extends Controller
                 ->make(true);
         }
 
-        $countries = Country::pluck("name","id");
+        $countries = Country::pluck("name", "id");
+
+        LogActivity::addToLog('Školy index');
         return view('admin.pages.school', compact('countries'));
     }
 
@@ -55,6 +58,22 @@ class SchoolController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'city_id' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'url' => 'required',
+            'address' => 'required',
+            'postcode' => 'required',
+        ], [
+                'name.required' => 'Názov školy je povinný.',
+                'email.required' => 'Email je povinný.',
+                'url.required' => 'Webová stránka školy je povinná.',
+                'address.required' => 'Adresa školy povinná.',
+                'postcode.required' => 'PSČ školy je povinné.',
+                'city_id.required' => 'Mesto školy je povinné.',
+            ]
+        );
 
         $schoolId = $request->school_id;
         $school = School::updateOrCreate(
@@ -68,6 +87,7 @@ class SchoolController extends Controller
                 'postcode' => $request->input('postcode')
             ]);
 
+        LogActivity::addToLog('Pridanie / úprava školy');
         return response()->json($school);
     }
 
@@ -82,6 +102,8 @@ class SchoolController extends Controller
     public function destroy($id)
     {
         $school = School::where('id', $id)->delete();
-        return response ()->json ($school);
+
+        LogActivity::addToLog('Zmazanie školy');
+        return response()->json($school);
     }
 }

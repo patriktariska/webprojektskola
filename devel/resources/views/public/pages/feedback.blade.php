@@ -41,10 +41,13 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="program">Názov programu:</label>
-                                <select class="form-control" name="program">
-                                    <option value="Odporúčam">Odporúčam</option>
-                                    <option value="Neodporúčam">Neodporúčam</option>
-                                </select>
+                                    <select class="form-control select2" name="mobility_id" id="mobility_id">
+                                        @foreach($getMobility as $mobility)
+                                            <option value="{{ $mobility->id }}">{{ $mobility->name }}
+                                                , {{ $mobility->school->name }}</option>
+                                        @endforeach
+                                    </select>
+
                             </div>
                         </div>
                         <div class="row form-group">
