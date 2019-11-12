@@ -122,37 +122,34 @@
             <div class="row align-items-stretch">
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-money"></span></div>
                         <div>
                             <h3>Financie</h3>
                             <p>Veľkou výhodou programu Erasmus+ sú granty. Vystačí ti grant na uživenie sa počas celého semestra (v normálnom byte a so súcim sociálnym životom)? Nie.
                                 Ale zaplatí to cestovné náklady a náklady na bývanie. Ak chceš vedieť viac informácií o grantoch, ich výške a ako sa udeľujú, pozri sa na webstránku
                                 erasmusplus.sk a na webstránku tvojej školy, ktorá v sekcii Medzinárodných vzťahov určite bude mať záložku o Erasme.</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-plane"></span></div>
                         <div>
                             <h3>Cestovanie</h3>
                             <p>Toto je asi jednoznačné. Môžeš cestovať! A pomerne veľa! Okrem toho, že budeš môcť neznámu krajinu volať domovom a preskúmavať
                                 ju s domácimi, takmer na každej škole zapojenej do programu funguje ESN (Erasmus Student Network). ESN organizuje kopec výletov,
                                 spoznávacích zájazdov, stretnutí s ostatnými erasmákmi a rozličné párty.</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-graduation-cap"></span></div>
                         <div>
                             <h3>Škola</h3>
                             <p>Napriek tomu, že budeš v zahraničí na dlhšiu dobu, nemusíš prerušiť štúdium a prichádzať tak o vzácny čas a peniaze.
                                 Stačí, ak si na zahraničnej univerzite nájdeš predmety, ktorých obsah bude korešpondovať aspoň sčasti s obsahom
                                 predmetov, ktoré sa v tom čase budú vyučovať u vás doma.</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +157,7 @@
 
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-users"></span></div>
                         <div>
                             <h3>Nové Priateľstvá</h3>
                             <p>Cudzie prostredie je pre vás všetkých spoločná novinka a tak sa džungľou neznáma boríte spolu. Bývate spolu,
@@ -168,30 +165,27 @@
                                 (odporúčam prenajímať si auto a určite využite Airbnb) a skrze to všetko budujete vzťahy aké nikdy predtým ani
                                 potom nezažijete. Naozaj sa netreba ľudí báť, priateľov si nájdeš, len sa netreba báť urobiť prvý krok
                                 a povedať Hey!</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-institution"></span></div>
                         <div>
                             <h3>Nová Kultúra</h3>
                             <p>Áno, na dovolenkách si už skúsil všeličo, ale nič nikdy nenahradí dlhodobý pobyt v cudzej krajine, kde sa staneš na chvíľu domácim.
                                 Nová kuchyňa, nový jazyk, úplne nová mentalita ľudí, to všetko môže znieť odstrašujúco, no v skutočnosti je to nádherná škola
                                 života, a je to zaiste najlepší spôsob spoznávania krajiny.</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ski"></span></div>
+                        <div class="unit-4-icon mr-4"><span class="text-primary fa fa-language"></span></div>
                         <div>
                             <h3>Cudzí Jazyk</h3>
                             <p>Keď si nútený/á komunikovať v cudzom jazyku, tak je prirodzené, že sa v ňom aj zlepšíš.
                                 &Koľko jazykov predsa vieš, toľkokrát si človekom!</p>
-                            <p><a href="#"><span class="icon-arrow-right"></a></p>
                         </div>
                     </div>
                 </div>
