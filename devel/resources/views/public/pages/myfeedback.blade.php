@@ -35,6 +35,7 @@
                                 <th>Komentár</th>
                                 <th>Odporúčanie</th>
                                 <th>Vytvorený feedback</th>
+                                <th>Akcia</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -44,7 +45,10 @@
                                     <td>{{ $Feedback->comment }}</td>
                                     <td>{{ $Feedback->rate }}</td>
                                     <td>{{ $Feedback->created_at }}</td>
-                                    <td></td>
+                                    <td>
+                                         <a href="{{ route('myfeedback.edit' , $Feedback->id) }}" >Edit</a>
+
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -54,6 +58,7 @@
                                 <th>Komentár</th>
                                 <th>Odporúčanie</th>
                                 <th>Vytvorený feedback</th>
+                                <th>Akcia</th>
                             </tr>
                             </tfoot>
                         </table>

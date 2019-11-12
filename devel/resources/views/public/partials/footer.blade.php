@@ -20,31 +20,28 @@
                 <div class="mb-5">
                     <h3 class="footer-heading mb-4">Chcem študovať na UKF</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">Prijímacie konanie</a></li>
-                            <li><a href="#">Poď k nám študovať</a></li>
-                            <li><a href="#">Aktuálna ponuka štúdia</a></li>
-                            <li><a href="#">Podmienky prijatia na štúdium</a></li>
-                            <li><a href="#">Prihláška na štúdium</a></li>
-                            <li><a href="#">Potvrdenie nástupu na štúdium</a></li>
-                            <li><a href="#">Záujem o ubytovanie</a></li>
-                            <li><a href="#">Dôležité termíny</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie">Prijímacie konanie</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/pod-k-nam-studovat">Poď k nám študovať</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/aktualna-ponuka-studia">Aktuálna ponuka štúdia</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/podmienky-prijatia-na-studium">Podmienky prijatia na štúdium</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/prihlasovanie-sa-na-studium">Prihláška na štúdium</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/potvrdenie-nastupu-na-studium">Potvrdenie nástupu na štúdium</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/zaujem-o-ubytovanie">Záujem o ubytovanie</a></li>
+                            <li><a href="https://www.ukf.sk/prijimacie-konanie/dolezite-terminy">Dôležité termíny</a></li>
                         </ul>
                 </div>
             </div>
 
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="mb-5">
-                    <h3 class="footer-heading mb-2">Odoberať novinky</h3>
-                    <p>Chceš byť stále informovaný o aktuálnych ponukách ERASMUS+? Tak zadaj svôj email a už nezmeškáš žiadnu z našich ponúk!</p>
+                    <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/images/studium/A5_brozura_SK_Preco_studovat_na_UKF_akad.r.20-21_web1.pdf">Študuj na UKF</a></h3>
+                    </br>
+                    <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/images/veda_a_vyskum/A5_vyskumne_timy_brozura_SK_EN_2019_preprint1a.pdf">Najvýznamnejšie výskumné tímy</a></h3>
+                    </br>
+                    <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/ochrana-osobnych-udajov">Ochrana osobných údajov</a></h3>
+                    </br>
 
-                    <form action="#" method="post">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary text-white" type="button" id="button-addon2">Odoberať</button>
-                            </div>
-                        </div>
-                    </form>
+
                 </div>
             </div>
 

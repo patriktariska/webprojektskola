@@ -76,6 +76,17 @@ class PagesController extends Controller
             ->with('success', 'Vaša správa bola úspešne odoslaná.');
     }
 
+    public function editMyFeedback($id){
+        $myfeed = Feedback::where('id', $id)->first();
+
+        return view('public.pages.extension.myfeedback.edit', compact('myfeed'));
+    }
+
+    public function updateMyFeedback(Request $request){
+
+
+    }
+
     // Contact Page //
     public function getContact()
     {

@@ -70,6 +70,9 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     Route::get('feed', 'PagesController@getFeedback');
     Route::post('feed', 'PagesController@sendFeedback')->name('send.feedback');
     Route::get('myfeed', 'PagesController@getMyFeedback')->name('myfeedback');
+    Route::get('myfeed/{id}/edit' , 'PagesController@editMyFeedback')->name('myfeedback.edit');
+    Route::post('myfeed', 'PagesController@updateMyFeedback')->name('myfeedback.update');
+
 
     /* Contact page route*/
     Route::get('contact', 'PagesController@getContact');
