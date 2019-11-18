@@ -105,7 +105,7 @@
                     <p>Očkování – Fakultní nemocnice, Centrum očkování a cestovní medicíny.</p>
                     <p>Cestovní pojištění na celou dobu pobytu. Musí být v souladu se <a href="http://fim.uhk.cz/mobility2/data/doc/erasmus/student/stahuj/smernice2_2013.pdf">směrnicí kvestora č. 2/2013</a>.</p>
                     <p>Vízum.</p>
-                    <p>Zakoupit letenku.</p>
+                    <p>Zakoupit letenku. </p>
                     <p>Podepsat finanční dohodu, ve které jsou specifikovány podmínky stáže a udělení stipendia.</p>
                 </div>
 
