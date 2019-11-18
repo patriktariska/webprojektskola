@@ -15,8 +15,3 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 <link rel="stylesheet" href="{{ asset('public/dist/css/aos.css') }}">
 <link rel="stylesheet" href="{{ asset('public/dist/css/style.css') }}">
-
-
-
-
-

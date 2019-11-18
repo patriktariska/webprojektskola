@@ -11,4 +11,11 @@
 <script src="{{ asset('public/dist/js/aos.js') }}"></script>
 <script src="{{ asset('public/dist/js/main.js') }}"></script>
 
-
+<!-- script na mobility -->
+<script>
+    // BS tabs hover (instead - hover write - click)
+    $('.tab-menu a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>

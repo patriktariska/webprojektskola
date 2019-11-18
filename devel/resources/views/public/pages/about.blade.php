@@ -2,7 +2,7 @@
 @section('content')
     <div class="site-section bg-light">
         <div class="container">
-            <h2><center>Univerzita Konštantína Filozofa v Nitre</h2>
+            <h2><center>Univerzita Konštantína Filozofa v Nitre</center></h2>
                 <br class="p-4 mb-3 bg-white">
                     <div class="slide-one-item home-slider owl-carousel">
                     <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/ukf1.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -13,6 +13,7 @@
                         </div>
                     </div>
                 </br>
+            <div style="text-align: justify;">
                     <h3>O univerzite</h3>
                     <p class="mb-4">Univerzita Konštantína Filozofa v Nitre (UKF) je modernou vzdelávacou, vedeckou a umeleckou inštitúciou, ktorá nesie
                         meno významnej osobnosti v histórii Nitry i Slovenska – Konštantína Filozofa (svätého Cyrila, 827 – 869). Jej poslaním je
@@ -38,6 +39,7 @@
                     <p class="mb-4">UKF sa zameriava aj na prácu so študentmi a je známa prípravou kultúrno-spoločenských a športových
                         podujatí a aktivít pre študentov, z ktorých mnohé majú dlhú tradíciu. Vydáva univerzitný časopis Náš Čas a
                         študentský časopis s názvom Občas nečas.</p>
+            </div>
                 </div>
         </div>
     </div>
