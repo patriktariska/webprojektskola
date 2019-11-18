@@ -84,7 +84,7 @@
             </div>
             <div class="row">
                 @foreach($mobilities as $Mobilities)
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
                         <a href="{{ route('public.mobility.show',$Mobilities->id) }}" class="unit-1 text-center">
                             <img src="{{ asset('admin/mobility') }}/{{ $Mobilities->title_photo }}" alt="Image" class="img-fluid">
                             <div class="unit-1-text">
@@ -119,15 +119,15 @@
                     <p class="color-black-opacity-5">Prečo ísť na Erasmus?</p>
                 </div>
             </div>
-            <div class="row align-items-stretch">
+            <div class="row align-items-stretch text-justify">
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="unit-4 d-flex">
                         <div class="unit-4-icon mr-4"><span class="text-primary fa fa-money"></span></div>
                         <div>
                             <h3>Financie</h3>
-                            <p>Veľkou výhodou programu Erasmus+ sú granty. Vystačí ti grant na uživenie sa počas celého semestra (v normálnom byte a so súcim sociálnym životom)? Nie.
-                                Ale zaplatí to cestovné náklady a náklady na bývanie. Ak chceš vedieť viac informácií o grantoch, ich výške a ako sa udeľujú, pozri sa na webstránku
-                                erasmusplus.sk a na webstránku tvojej školy, ktorá v sekcii Medzinárodných vzťahov určite bude mať záložku o Erasme.</p>
+                            <p>Veľkou výhodou programov sú granty. Vystačí ti grant na uživenie sa počas celého semestra (v normálnom byte a so súcim sociálnym životom)? Nie.
+                                Ale zaplatí to cestovné náklady a náklady na bývanie. Ak chceš vedieť viac informácií o grantoch, ich výške a ako sa udeľujú, pozri sa na webstránky
+                                <a href="https://www.erasmusplus.sk/">Erasmus+</a> a <a href="https://ceepus.saia.sk/">CEEPUS</a> alebo na <a href="https://ukf.sk/">webstránku</a> tvojej školy, ktorá v sekcii Medzinárodných vzťahov určite bude mať záložku o Erasme.</p>
                         </div>
                     </div>
                 </div>
