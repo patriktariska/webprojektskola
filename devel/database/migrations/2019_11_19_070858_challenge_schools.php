@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMobilitiesTable extends Migration
+class ChallengeSchools extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateMobilitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('mobilities', function (Blueprint $table) {
+        Schema::create('challenge_schools', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type');
-            $table->longText('desc');
+            $table->unsignedInteger('school_id');
+            $table->foreign('school_id')->references('id')->on('schools');
+            $table->unsignedInteger('challenge_id');
+            $table->foreign('challenge_id')->references('id')->on('challenges');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateMobilitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mobilities');
+        //
     }
 }

@@ -10,12 +10,12 @@ class Feedback extends Model
     use Notifiable;
 
     protected $fillable = [
-        'user_id', 'mobility_id', 'comment', 'photo', 'rate', 'published',
+        'user_id', 'challenge_id', 'comment', 'photo', 'rate', 'published',
     ];
 
     // Relation
-    public function Mobility(){
-        return $this->belongsTo('App\Mobility');
+    public function Challenge(){
+        return $this->belongsTo('App\Challenge');
     }
 
     public function Student(){

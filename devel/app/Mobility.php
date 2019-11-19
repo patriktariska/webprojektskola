@@ -9,16 +9,13 @@ class Mobility extends Model
 {
     use Notifiable;
 
+    
     protected $fillable = [
-        'school_id', 'name', 'type', 'description', 'capacity', 'start', 'end',
+        'type', 'desc',
     ];
 
     // Relation
-    public function School(){
-        return $this->belongsTo('App\School');
-    }
-
-    public function Feedback(){
-        return $this->$this->hasMany('App\Feedback');
+    public function Challenge(){
+        return $this->$this->hasMany('App\Challenge');
     }
 }

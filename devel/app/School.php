@@ -17,7 +17,7 @@ class School extends Model
     public function City(){
         return $this->belongsTo('App\City');
     }
-    public function Mobility(){
-        return $this->$this->hasMany('App\Mobility');
+    public function Challenge(){
+        return $this->belongsToMany('App\Challenge' , 'challenge_schools');
     }
 }
