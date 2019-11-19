@@ -1,6 +1,6 @@
 <footer class="site-footer">
     <div class="container">
-        <div class="row">
+        <div class="row" style="padding-top: 2em;">
 
             <div class="col-lg-4">
                 <div class="mb-5">
@@ -40,14 +40,12 @@
                     </br>
                     <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/ochrana-osobnych-udajov">Ochrana osobných údajov</a></h3>
                     </br>
-
-
                 </div>
             </div>
 
         </div>
 
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row text-center">
             <div class="col-md-12">
                 <div class="mb-5">
                     <a href="https://www.facebook.com/UKFvNitre/" class="pl-0 pr-3" target="_blank"><span class="icon-facebook"></span></a>

@@ -35,6 +35,11 @@ class PagesController extends Controller
         return view('public.pages.extension.mobility.show', compact('getMobility'));
     }
 
+    public function getAllMobilities(){
+        $getMobilities = Mobility::get();
+        return view('public.pages.extension.mobility.mobilities', compact('getMobilities'));
+    }
+
     // Feedback Page //
     public function getFeedback()
     {
