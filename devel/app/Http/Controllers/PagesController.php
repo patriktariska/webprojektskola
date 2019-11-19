@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Mail;
 use App\Student;
+use App\Challenge;
 use App\Feedback;
 use Image;
 use Auth;
@@ -35,9 +36,9 @@ class PagesController extends Controller
         return view('public.pages.extension.mobility.show', compact('getMobility'));
     }
 
-    public function getAllMobilities(){
-        $getMobilities = Mobility::get();
-        return view('public.pages.extension.mobility.mobilities', compact('getMobilities'));
+    public function getAllChallenges(){
+        $getChallenges = Challenge::get();
+        return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
     }
 
     // Feedback Page //

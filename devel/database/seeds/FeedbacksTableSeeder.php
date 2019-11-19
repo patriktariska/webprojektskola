@@ -15,7 +15,7 @@ class FeedbacksTableSeeder extends Seeder
         for($i=1 ; $i<=10; $i++) {
             $mobility = Feedback::create([
                 'user_id' => 2,
-                'mobility_id' => rand(1,10),
+                'challenge_id' => rand(1,10),
                 'comment' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
                 'photo' => '1572249230.PNG',
                 'rate' => 'Odporúčam',

@@ -62,7 +62,7 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     Route::get('/', 'PagesController@getIndex');
 
     Route::get('/mobility/{mobility}', 'PagesController@getMobility')->name('public.mobility.show');
-    Route::get('mobility', 'PagesController@getAllMobilities')->name('public.mobility.mobilities');
+    Route::get('challenges', 'PagesController@getAllChallenges')->name('public.mobility.challenges');
 
     /*About page route*/
     Route::get('about', 'PagesController@getAbout')->name('about.index');

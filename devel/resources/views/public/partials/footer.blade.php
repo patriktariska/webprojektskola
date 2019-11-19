@@ -35,11 +35,11 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="mb-5">
                     <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/images/studium/A5_brozura_SK_Preco_studovat_na_UKF_akad.r.20-21_web1.pdf">Študuj na UKF</a></h3>
-                    </br>
+                    <br>
                     <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/images/veda_a_vyskum/A5_vyskumne_timy_brozura_SK_EN_2019_preprint1a.pdf">Najvýznamnejšie výskumné tímy</a></h3>
-                    </br>
+                    <br>
                     <h3 class="footer-heading mb-2"><a href="https://www.ukf.sk/ochrana-osobnych-udajov">Ochrana osobných údajov</a></h3>
-                    </br>
+                    <br>
                 </div>
             </div>
 
@@ -51,7 +51,10 @@
                     <a href="https://www.facebook.com/UKFvNitre/" class="pl-0 pr-3" target="_blank"><span class="icon-facebook"></span></a>
                     <a href="https://www.instagram.com/ukfvnitre/?hl=sk" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"></span></a>
                 </div>
-                <p>Develop by UKF team.</p>
+                <div class="mb-5">
+                    <p>Developed by UKF team.</p>
+                    <p style="font-size: 10px;">ZigoŠókyVašStojkaTariška</p>
+                </div>
             </div>
         </div>
 
