@@ -56,7 +56,7 @@
                             <a href="{{ url('/') }}">Domov</a>
                         </li>
                         <li class="has-children">
-                        <a href="{{ route("public.mobility.mobilities") }}">Výzvy</a>
+                        <a href="{{ route("public.mobility.challenges") }}">Výzvy</a>
                             <ul class="dropdown">
                                 <li><a href="#">Erasmus+</a></li>
                                 <li><a href="#">CEEPUS</a></li>
