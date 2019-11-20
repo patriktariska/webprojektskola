@@ -53,14 +53,17 @@
     <div class="site-section">
         <div class="container overlap-section">
             <div class="row">
-                @foreach($newMobilities as $newMobilities)
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <a href="{{ route('public.mobility.show',$newMobilities->id) }}" class="unit-1 text-center">
-                        <img src="{{ asset('admin/mobility') }}/{{ $newMobilities->title_photo }}" alt="Image" class="img-fluid">
-                        <div class="unit-1-text">
-                            <h3 class="unit-1-heading">{{ $newMobilities->name }}</h3>
+                @foreach($newChallenges as $challenge)
+                <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
+                    <div class="container border pt-3 pb-3" style="border-radius: 20px">
+                        <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
+                        <div class="text-left pt-3" style="line-height: 10px">
+                            <p style="font-size: 22px">{{ $challenge->name }}</p>
+                            <p>Typ: {{ $challenge->type }}</p>
+                            <p>Prihlášky do: {{ date_format(new DateTime($challenge->end),"d. m. Y") }}</p>
+                            <a class="btn btn-primary" href="{{ route('public.mobility.show',$challenge->id) }}" role="button" style="border-radius: 2px;">Detail výzvy</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 @endforeach
             </div>
@@ -76,14 +79,17 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($mobilities as $Mobilities)
+                @foreach($challenges as $challenge)
                     <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
-                        <a href="{{ route('public.mobility.show',$Mobilities->id) }}" class="unit-1 text-center">
-                            <img src="{{ asset('admin/mobility') }}/{{ $Mobilities->title_photo }}" alt="Image" class="img-fluid">
-                            <div class="unit-1-text">
-                                <h3 class="unit-1-heading">{{ $Mobilities->name }}</h3>
+                        <div class="container border pt-3 pb-3" style="border-radius: 20px">
+                            <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
+                            <div class="text-left pt-3" style="line-height: 10px">
+                                <p style="font-size: 22px">{{ $challenge->name }}</p>
+                                <p>Typ: {{ $challenge->type }}</p>
+                                <p>Prihlášky do: {{ date_format(new DateTime($challenge->end),"d. m. Y") }}</p>
+                                <a class="btn btn-primary" href="{{ route('public.mobility.show',$challenge->id) }}" role="button" style="border-radius: 2px;">Detail výzvy</a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 @endforeach
             </div>

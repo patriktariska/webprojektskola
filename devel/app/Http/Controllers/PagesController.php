@@ -15,11 +15,11 @@ class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
-        $newMobilities = Challenge::with('School')->orderBy('created_at', 'desc')->take(3)->get();
-        $mobilities = Challenge::with('School')->orderBy('created_at', 'desc')->get();
+        $newChallenges = Challenge::with('School')->orderBy('created_at', 'desc')->take(3)->get();
+        $challenges = Challenge::with('School')->orderBy('end', 'asc')->take(6)->get();
         $feedback = Feedback::with('Student')->where('published', true)->get();
         //return response()->json($feedback);
-        return view('public.pages.index', compact('feedback', 'newMobilities', 'mobilities'));
+        return view('public.pages.index', compact('feedback', 'newChallenges', 'challenges'));
     }
 
     // About Page //
