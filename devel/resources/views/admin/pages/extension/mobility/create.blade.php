@@ -45,8 +45,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Typ mobility</label>
-                                    <input type="text" name="type" id="type" class="form-control"
-                                           placeholder="Enter ...">
+                                    <select class="form-control select2" name="mobility_id" id="mobility_id">
+                                        @foreach($mobility as $Mobilities)
+                                            <option value="{{ $Mobilities->id }}" selected>{{ $Mobilities->type }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -76,7 +79,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Nahladový obrázok</label>
-                                    <input type="file" name="myFile" class="form-control">
+                                    <input type="file" name="myFile" class="form-control" required>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </div>
                             </div>

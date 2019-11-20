@@ -18,7 +18,6 @@ class CreateChallengesTable extends Migration
             $table->unsignedInteger('mobility_id');
             $table->foreign('mobility_id')->references('id')->on('mobilities');
             $table->string('name');
-            $table->string('type');
             $table->string('description');
             $table->string('capacity');
             $table->date('start');

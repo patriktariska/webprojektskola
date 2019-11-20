@@ -27,7 +27,6 @@
                 </div>
             @endif
             @if(auth()->check())
-
                         <table id="myfeedback_table" class="table table-bordered table-striped">
                             <thead>
                             <tr>
@@ -62,7 +61,7 @@
                             </tr>
                             </tfoot>
                         </table>
-
+                    {{ $feedback->links() }}
             @else
                 <div class="row">
                     <div class="col-md-7">

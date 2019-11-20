@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mobility;
-use App\User;
+use App\Challenge;
 use Illuminate\Http\Request;
 use Mail;
 use App\Student;
@@ -16,8 +15,8 @@ class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
-        $newMobilities = Mobility::with('School')->orderBy('created_at', 'desc')->take(3)->get();
-        $mobilities = Mobility::with('School')->orderBy('created_at', 'desc')->get();
+        $newMobilities = Challenge::with('School')->orderBy('created_at', 'desc')->take(3)->get();
+        $mobilities = Challenge::with('School')->orderBy('created_at', 'desc')->get();
         $feedback = Feedback::with('Student')->where('published', true)->get();
         //return response()->json($feedback);
         return view('public.pages.index', compact('feedback', 'newMobilities', 'mobilities'));
@@ -30,26 +29,26 @@ class PagesController extends Controller
     }
 
     // Mobility Page //
-    public function getMobility($id){
-        $getMobility = Mobility::with('School')->where('id' , $id)->first();
+    public function getChallange($id){
+        $getMobility = Challenge::with('School')->where('id' , $id)->first();
         return view('public.pages.extension.mobility.show', compact('getMobility'));
     }
 
     public function getAllMobilities(){
-        $getMobilities = Mobility::get();
+        $getMobilities = Challenge::get();
         return view('public.pages.extension.mobility.mobilities', compact('getMobilities'));
     }
 
     // Feedback Page //
     public function getFeedback()
     {
-        $getMobility = Mobility::get();
-        return view('public.pages.feedback', compact('getMobility'));
+        $getChallenge = Challenge::with('School')->get();
+        return view('public.pages.feedback', compact('getChallenge'));
     }
     public function getMyFeedback()
     {
         if(Auth::user()){
-            $feedback = Feedback::where('user_id', Auth::user()->id)->latest()->get();
+            $feedback = Feedback::where('user_id', Auth::user()->id)->latest()->paginate(6);
             return view('public.pages.myfeedback', compact('feedback'));
         }
         return view('public.pages.myfeedback');
@@ -57,10 +56,13 @@ class PagesController extends Controller
 
     public function sendFeedback(Request $request){
         $this->validate($request, [
-            'rate' => 'required',
-            'comment' => 'min:5'
+            'challenge_id' => 'required',
+            'comment' => 'min:5',
+            'rate' => 'required'
         ], [
-                'message.min' => 'Správa je príliž krátka.'
+                'challenge_id.required' => 'Program je povinný.',
+                'comment.min' => 'Váš feedback je priliž krátky',
+                'rate.required' => 'Hodnotenie je povinné pole.'
             ]
         );
 
@@ -71,10 +73,10 @@ class PagesController extends Controller
             save(public_path('/feedback/' . $filename));
 
             $feedback->photo = $filename;
-            $feedback->comment = $request->input('message');
+            $feedback->comment = $request->input('comment');
             $feedback->rate = $request->input('rate');
             $feedback->user_id = $request->input('user_id');
-            $feedback->mobility_id = $request->input('mobility_id');
+            $feedback->challenge_id = $request->input('challenge_id');
             $feedback->save();
 
         return redirect()->back()
@@ -88,8 +90,22 @@ class PagesController extends Controller
     }
 
     public function updateMyFeedback(Request $request){
+        $this->validate($request, [
+            'comment' => 'min:5',
+            'rate' => 'required'
+        ], [
+                'comment.min' => 'Váš feedback je priliž krátky',
+                'rate.required' => 'Hodnotenie je povinné pole.'
+            ]
+        );
 
+        $myfeed = Feedback::findOrFail($request->id);
+        $myfeed->comment = $request->input('comment');
+        $myfeed->rate = $request->input('rate');
+        $myfeed->save();
 
+        return redirect()->route('myfeedback')
+            ->with('success', 'Vaša feedback bol upravený.');
     }
 
     // Contact Page //

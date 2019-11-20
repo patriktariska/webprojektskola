@@ -16,6 +16,6 @@ class Mobility extends Model
 
     // Relation
     public function Challenge(){
-        return $this->$this->hasMany('App\Challenge');
+        return $this->hasMany('App\Challenge');
     }
 }

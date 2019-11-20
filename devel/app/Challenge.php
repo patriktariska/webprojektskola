@@ -10,12 +10,12 @@ class Challenge extends Model
     use Notifiable;
 
     protected $fillable = [
-        'school_id', 'name', 'type', 'description', 'capacity', 'start', 'end',
+        'mobility_id', 'name', 'description', 'capacity', 'start', 'end',
     ];
 
     // Relation
     public function School(){
-        return $this->belongsToMany('App\School' , 'challenge_schools');
+        return $this->belongsToMany('App\School' , 'challenge_schools')->withTimestamps();
     }
 
     public function Feedback(){

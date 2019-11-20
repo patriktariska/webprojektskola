@@ -362,7 +362,7 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-        //AJAX SHOW SCHOOL
+        //AJAX SHOW MOBILITY
         var table = $('#mobility_datatable').DataTable({
             responsive: true,
             processing: true,
@@ -404,8 +404,8 @@
             columns: [
                 {data: 'id', name: 'id', 'visible': false},
                 {data: 'name', name: 'name'},
-                {data: 'school.name', name: 'school.name'},
-                {data: 'type', name: 'type'},
+                {data: 'school.[].name', name: 'name'},
+                {data: 'mobility.type', name: 'type'},
                 {data: 'start', name: 'start'},
                 {data: 'end', name: 'end'},
                 {data: 'created_at', name: 'created_at',},

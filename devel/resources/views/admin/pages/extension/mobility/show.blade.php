@@ -29,13 +29,15 @@
             </div>
             <!-- /.col -->
             <div class="col-sm-4 invoice-col">
+                @foreach($getMobilities->school as $schools)
                 <address>
-                    Názov školy: <strong>{{ $getMobilities->school->name }}</strong><br>
-                    Email školy: {{ $getMobilities->school->email }}<br>
-                    Webová stránka: {{ $getMobilities->school->url }}
-                    Adresa školy: {{ $getMobilities->school->address }}<br>
-                    PSČ: {{ $getMobilities->school->postcode }}<br>
+                    Názov školy: <strong>{{ $schools->name }}</strong><br>
+                    Email školy: {{ $schools->email }}<br>
+                    Webová stránka: {{ $schools->url }}<br>
+                    Adresa školy: {{ $schools->address }}<br>
+                    PSČ: {{ $schools->postcode }}<br>
                 </address>
+                @endforeach
             </div>
             <!-- /.col -->
         </div>

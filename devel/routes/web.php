@@ -38,7 +38,7 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     /*Mobility page route*/
     Route::resource('mobility', 'Admin\MobilityController');
     Route::get('mobility/delete/{id}', 'Admin\MobilityController@destroy')->name('mobility.delete');
-
+    Route::get('mobility/{id}/edit', 'Admin\MobilityController@edit')->name('mobility.edit');
 
     /*Profile page route*/
     Route::get('profile', 'Admin\PagesController@getProfile')->name('profile.index');
@@ -61,8 +61,8 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     /*Index page route*/
     Route::get('/', 'PagesController@getIndex');
 
-    Route::get('/mobility/{mobility}', 'PagesController@getMobility')->name('public.mobility.show');
-    Route::get('mobility', 'PagesController@getAllMobilities')->name('public.mobility.mobilities');
+    Route::get('/challange/{challange}', 'PagesController@getChallange')->name('public.mobility.show');
+    Route::get('challange', 'PagesController@getAllMobilities')->name('public.mobility.mobilities');
 
     /*About page route*/
     Route::get('about', 'PagesController@getAbout')->name('about.index');

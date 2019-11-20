@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Charts\SampleChart;
 use App\Feedback;
 use App\Helpers\LogActivity;
-use App\Mobility;
+use App\Challenge;
 use App\School;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -23,7 +23,7 @@ class PagesController extends Controller
     public function index()
     {
         $countSchool = School::count();
-        $countMobility = Mobility::count();
+        $countMobility = Challenge::count();
         $countFeedback = Feedback::count();
         $countLogs = LogActivity::logActivityLists()->count();
 
@@ -35,7 +35,7 @@ class PagesController extends Controller
                 return count($item);
             });
 
-        $getCountMobilitiesMonth = Mobility::orderBy('created_at')->get(['id', 'created_at'])
+        $getCountMobilitiesMonth = Challenge::orderBy('created_at')->get(['id', 'created_at'])
             ->groupBy(function ($date) {
                 return Carbon::parse($date->created_at)->format('M');
             })

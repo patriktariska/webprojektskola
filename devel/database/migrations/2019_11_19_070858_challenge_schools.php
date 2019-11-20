@@ -16,9 +16,9 @@ class ChallengeSchools extends Migration
         Schema::create('challenge_schools', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('school_id');
-            $table->foreign('school_id')->references('id')->on('schools');
+            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
             $table->unsignedInteger('challenge_id');
-            $table->foreign('challenge_id')->references('id')->on('challenges');
+            $table->foreign('challenge_id')->references('id')->on('challenges')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class ChallengeSchools extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('challenge_schools');
     }
 }

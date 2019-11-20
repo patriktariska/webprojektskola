@@ -17,14 +17,15 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">Upravenie mobility</h3>
                     </div>
-                    {{ Form::open(['route' => 'mobility.update','files' => 'true', 'method' => 'POST', 'class'=>'form']) }}
+                    {{ Form::model($getMobility, ['method' => 'PATCH','files' => 'true','route' => ['mobility.update', $getChallenge->id]]) }}
                     {{ csrf_field() }}
+                    <input type="hidden" name="id" id="id">
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Názov mobility</label>
-                                    <input type="text" value="{{ $getMobility->name }}" name="name" id="name" class="form-control"
+                                    <input type="text" value="{{ $getChallenge->name }}" name="name" id="name" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
                             </div>
@@ -34,7 +35,7 @@
                                     <label>Škola</label>
                                     <select class="form-control select2" name="school_id" id="school_id">
                                         @foreach($school as $School)
-                                            <option value="{{ $School->id }}" {{ ( $School->id != $selectedID) ? 'selected' : '' }}>{{ $School->name }}
+                                            <option value="{{ $School->id }}"  {{ $School->id == $selectedID ? 'selected="selected"' : '' }}>{{ $School->name }}
                                                 , {{ $School->address }}, {{ $School->email }}</option>
                                         @endforeach
                                     </select>
@@ -45,14 +46,19 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Typ mobility</label>
-                                    <input type="text" value="{{ $getMobility->type }}" name="type" id="type" class="form-control"
-                                           placeholder="Enter ...">
+                                    <select class="form-control select2" name="mobility_id" id="mobility_id">
+                                        @foreach($getMobility as $Mobilities)
+                                            <option value="{{ $Mobilities->id }}"
+                                            {{ $Mobilities->id == $getChallenge->mobility_id ? 'selected="selected"' : '' }}>
+                                                {{ $Mobilities->type }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Kapacita mobility</label>
-                                    <input type="number" value="{{ $getMobility->capacity }}" name="capacity" id="capacity" class="form-control"
+                                    <input type="number" value="{{ $getChallenge->capacity }}" name="capacity" id="capacity" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
                             </div>
@@ -61,14 +67,14 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Začiatok mobility</label>
-                                    <input type="date" value="{{ $getMobility->start }}" name="start" id="start" class="form-control"
+                                    <input type="date" value="{{ $getChallenge->start }}" name="start" id="start" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Koniec mobility</label>
-                                    <input type="date" value="{{ $getMobility->end }}" name="end" id="end" class="form-control" placeholder="Enter ...">
+                                    <input type="date" value="{{ $getChallenge->end }}" name="end" id="end" class="form-control" placeholder="Enter ...">
                                 </div>
                             </div>
                         </div>
@@ -76,6 +82,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Nahladový obrázok</label>
+                                    <img src="{{ asset('/admin/mobility/'.$getChallenge->title_photo) }}" style="width:100px;"/>
                                     <input type="file" name="myFile" class="form-control">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </div>
@@ -84,7 +91,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <textarea name="description" id="description">
-                                    {{ $getMobility->description }}
+                                    {{ $getChallenge->description }}
                                 </textarea>
                             </div>
                         </div>

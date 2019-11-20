@@ -4,10 +4,7 @@
         <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/erasmus.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
-
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-
-
                         <h1 class="text-white font-weight-light">Študijný pobyt</h1>
                         <p class="mb-5">Student Mobility for Studies</p>
                         <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
@@ -16,7 +13,6 @@
                 </div>
             </div>
         </div>
-
         <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/staz.jpeg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
@@ -29,7 +25,6 @@
                 </div>
             </div>
         </div>
-
         <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/prednaska.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
@@ -42,11 +37,9 @@
                 </div>
             </div>
         </div>
-
         <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/skolenie.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
-
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                         <h1 class="text-white font-weight-light">Školenie</h1>
                         <p class="mb-5">Staff Training Mobility</p>
@@ -62,7 +55,7 @@
             <div class="row">
                 @foreach($newMobilities as $newMobilities)
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <a href="#" class="unit-1 text-center">
+                    <a href="{{ route('public.mobility.show',$newMobilities->id) }}" class="unit-1 text-center">
                         <img src="{{ asset('admin/mobility') }}/{{ $newMobilities->title_photo }}" alt="Image" class="img-fluid">
                         <div class="unit-1-text">
                             <h3 class="unit-1-heading">{{ $newMobilities->name }}</h3>
