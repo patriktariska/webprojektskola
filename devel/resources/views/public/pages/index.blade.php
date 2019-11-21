@@ -204,7 +204,6 @@
             @if (!$feedback->isEmpty())
                 <div class="nonloop-block-13 owl-carousel">
                     @foreach ($feedback as $Feedback)
-
                         <div class="item">
                             <div class="container">
                                 <div class="row">

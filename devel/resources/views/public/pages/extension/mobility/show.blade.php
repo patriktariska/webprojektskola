@@ -19,7 +19,7 @@
         section .detail-page .navigation ul li a{width:100%;text-decoration:none;padding:12px 25px;color:#434343;float:left;transition:all .3s ease 0s}
         section .detail-page .navigation ul li a:hover, section .detail-page .navigation ul li a:active{color:#fff;background: #ef6c57}
         section .detail-page .navigation ul li:last-of-type{border-bottom:1px solid #eaeaea}
-        @media (max-width:1199px){section .detail-page .navigation .box{top:95px}
+        @media (max-width:1199px){section .detail-page .navigation .box{top:95px}}
     </style>
 
     <section>
@@ -29,10 +29,10 @@
                 <header>
                     <div>
                         <h1>
-                            {!! $getMobility->name !!}
+                            {!! $getChallenge->name !!}
                         </h1>
                         <p>
-                            {!! $getMobility->type !!}
+                            {!! $getChallenge->type !!}
                         </p>
                     </div>
                 </header>
@@ -67,7 +67,7 @@
                         Univerzita UKF v Nitre stále rozširuje počet partnerských univerzít v zahraničí.
                     </p>
                     <p>
-                        {!! $getMobility->description !!}
+                        {!! $getChallenge->description !!}
                     </p>
                 </div>
 
@@ -77,7 +77,7 @@
                         <tbody>
                         <tr>
                             <th>Univerzita</th>
-                            <th>Mesto </strong></th>
+                            <th>Mesto</th>
                             <th>Kontaktná osoba</th>
                         </tr>
                         <tr>
