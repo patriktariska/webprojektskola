@@ -15,7 +15,7 @@ class Feedback extends Model
 
     // Relation
     public function Challenge(){
-        return $this->belongsTo('App\Challenge');
+        return $this->belongsTo('App\Challenge', 'challenge_id');
     }
 
     public function Student(){

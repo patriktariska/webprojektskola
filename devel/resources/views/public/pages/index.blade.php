@@ -197,7 +197,7 @@
     <div class="site-section block-13 bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <h2 class="font-weight-light text-black text-center">Feedback Študentov</h2>
                 </div>
             </div>
@@ -207,17 +207,16 @@
                         <div class="item">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-6 mb-5">
-                                        <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" alt="Image"
-                                             class="img-md-fluid">
+                                    <div class="col-lg-4 mb-4">
+                                        <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" alt="Image" class="img-md-fluid">
                                     </div>
-                                    <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                                        <h4>Hello</h4>
-                                        <p class="text-black lead">"{{ $Feedback->comment }}"</p>
-                                        <p class=""><em>{{ date('d.m.Y', strtotime($Feedback->created_at)) }}</em>, <a
-                                                    href="mailto:{{ $Feedback->student->email }}">{{ $Feedback->student->fname }} {{ $Feedback->student->lname }}</a>
+                                    <div class="overlap-left col-lg-9 p-md-4 align-self-center" style="background: rgba(255,255,255,0.7);text-align: justify;">
+                                        <h3>{{ $Feedback->challenge->name }}</h3>
+                                        <p class="text-black"><strong><em>"{{ $Feedback->comment }}"</em></strong></p>
+                                        <p><em>{{ date('d.m.Y', strtotime($Feedback->created_at)) }}</em>,
+                                            <a href="mailto:{{ $Feedback->student->email }}">{{ $Feedback->student->name }} {{ $Feedback->student->lname }}</a><br>
+                                            <strong>{{ $Feedback->rate }}</strong>
                                         </p>
-                                        <p>{{ $Feedback->rate }}</p>
                                     </div>
                                 </div>
                             </div>
