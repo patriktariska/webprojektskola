@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\LogActivity;
+use App\School;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\City;
 use App\Country;
 use App\State;
+
 
 class SchoolController extends Controller
 {
@@ -14,14 +17,28 @@ class SchoolController extends Controller
     {
         $this->middleware('auth');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $countries = Country::pluck('name', 'id');
+        if (request()->ajax()) {
+            return datatables()->of(School::with('City')->get())
+                ->addColumn('action', function ($row) {
+                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip" 
+                     data-id="' . $row->id . '" data-original-title="Edit" 
+                     class="edit btn btn-xs btn-warning edit-school"><i class="fa fa-edit"></i></a>';
+                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip" 
+                     data-id="' . $row->id . '" data-original-title="Delete" id="delete-school"
+                      class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
+
+        $countries = Country::pluck("name", "id");
+
+        LogActivity::addToLog('Školy index');
         return view('admin.pages.school', compact('countries'));
     }
 
@@ -39,69 +56,54 @@ class SchoolController extends Controller
         return response()->json($cities);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'city_id' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'url' => 'required',
+            'address' => 'required',
+            'postcode' => 'required',
+        ], [
+                'name.required' => 'Názov školy je povinný.',
+                'email.required' => 'Email je povinný.',
+                'url.required' => 'Webová stránka školy je povinná.',
+                'address.required' => 'Adresa školy povinná.',
+                'postcode.required' => 'PSČ školy je povinné.',
+                'city_id.required' => 'Mesto školy je povinné.',
+            ]
+        );
+
+        $schoolId = $request->school_id;
+        $school = School::updateOrCreate(
+            ['id' => $schoolId],
+            [
+                'city_id' => $request->input('city'),
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'url' => $request->input('url'),
+                'address' => $request->input('address'),
+                'postcode' => $request->input('postcode')
+            ]);
+
+        LogActivity::addToLog('Pridanie / úprava školy');
+        return response()->json($school);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $where = array('id' => $id);
+        $school = School::where($where)->first();
+
+        return response()->json($school);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $school = School::where('id', $id)->delete();
+
+        LogActivity::addToLog('Zmazanie školy');
+        return response()->json($school);
     }
 }

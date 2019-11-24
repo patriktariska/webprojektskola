@@ -3,15 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Mobility extends Model
 {
-    // Relation
-    public function School(){
-        return $this->belongsTo('App\School');
-    }
+    use Notifiable;
 
-    public function Feedback(){
-        return $this->$this->hasMany('App\Feedback');
+    
+    protected $fillable = [
+        'type', 'desc',
+    ];
+
+    // Relation
+    public function Challenge(){
+        return $this->hasMany('App\Challenge');
     }
 }

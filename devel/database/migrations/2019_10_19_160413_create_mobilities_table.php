@@ -15,6 +15,8 @@ class CreateMobilitiesTable extends Migration
     {
         Schema::create('mobilities', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('type');
+            $table->longText('desc');
             $table->timestamps();
         });
     }

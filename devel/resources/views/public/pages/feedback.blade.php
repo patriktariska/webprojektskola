@@ -41,16 +41,20 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="program">Názov programu:</label>
-                                <select class="form-control" name="program">
-                                    <option value="Odporúčam">Odporúčam</option>
-                                    <option value="Neodporúčam">Neodporúčam</option>
-                                </select>
+                                    <select class="form-control select2" name="challenge_id" id="challenge_id">
+                                        @foreach($getChallenge as $challenge)
+                                            @foreach($challenge->school as $school)
+                                            <option value="{{ $challenge->id }}">{{ $challenge->name }}, {{ $school->name }}</option>
+                                            @endforeach
+                                        @endforeach
+                                    </select>
+
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <label class="text-black" for="message">Správa:</label>
-                                <textarea name="message" id="message" name="message" cols="30" rows="7"
+                                <label class="text-black" for="comment">Správa:</label>
+                                <textarea id="comment" name="comment" cols="30" rows="7"
                                           class="form-control"
                                           placeholder="Podel sa o žažitky."></textarea>
                             </div>
@@ -60,7 +64,7 @@
                         <div class="p-4 mb-3 bg-white">
                             <h6>Zaznamenal / a si svoj zážitok v podobe fotky ? Pošli nám ju a mi ju pridáme ku tvojmu
                                 feedbacku</h6>
-                            <input type="file" name="myFile" class="form-control">
+                            <input type="file" name="myFile" class="form-control" required>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row form-group">
                                 <div class="col-md-12">

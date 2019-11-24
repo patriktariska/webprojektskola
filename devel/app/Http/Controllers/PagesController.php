@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Challenge;
 use Illuminate\Http\Request;
 use Mail;
 use App\Student;
 use App\Feedback;
 use Image;
+use Auth;
 
 
 class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
+        $newChallenges = Challenge::with('School')->orderBy('created_at', 'desc')->take(3)->get();
+        $challenges = Challenge::with('School')->orderBy('end', 'asc')->take(6)->get();
         $feedback = Feedback::with('Student')->where('published', true)->get();
         //return response()->json($feedback);
-        return view('public.pages.index', compact('feedback'));
+        return view('public.pages.index', compact('feedback', 'newChallenges', 'challenges'));
     }
 
     // About Page //
@@ -25,19 +28,41 @@ class PagesController extends Controller
         return view('public.pages.about');
     }
 
+    // Mobility Page //
+    public function getChallenge($id){
+        $getChallenge = Challenge::with('School')->where('id' , $id)->first();
+        return view('public.pages.extension.mobility.show', compact('getChallenge'));
+    }
+
+    public function getAllChallenges(){
+        $getChallenges = Challenge::get();
+        return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
+    }
+
     // Feedback Page //
     public function getFeedback()
     {
-        return view('public.pages.feedback');
+        $getChallenge = Challenge::with('School')->get();
+        return view('public.pages.feedback', compact('getChallenge'));
+    }
+    public function getMyFeedback()
+    {
+        if(Auth::user()){
+            $feedback = Feedback::where('user_id', Auth::user()->id)->latest()->paginate(6);
+            return view('public.pages.myfeedback', compact('feedback'));
+        }
+        return view('public.pages.myfeedback');
     }
 
     public function sendFeedback(Request $request){
         $this->validate($request, [
-            'program' => 'required',
-            'rate' => 'required',
-            'comment' => 'min:5'
+            'challenge_id' => 'required',
+            'comment' => 'min:5',
+            'rate' => 'required'
         ], [
-                'message.min' => 'Správa je príliž krátka.'
+                'challenge_id.required' => 'Program je povinný.',
+                'comment.min' => 'Váš feedback je priliž krátky',
+                'rate.required' => 'Hodnotenie je povinné pole.'
             ]
         );
 
@@ -48,12 +73,39 @@ class PagesController extends Controller
             save(public_path('/feedback/' . $filename));
 
             $feedback->photo = $filename;
-            $feedback->comment = $request->message;
-            $feedback->rate = $request->rate;
-            $feedback->user_id = $request->user_id;
+            $feedback->comment = $request->input('comment');
+            $feedback->rate = $request->input('rate');
+            $feedback->user_id = $request->input('user_id');
+            $feedback->challenge_id = $request->input('challenge_id');
             $feedback->save();
 
-        return view('public.pages.feedback');
+        return redirect()->back()
+            ->with('success', 'Vaša správa bola úspešne odoslaná.');
+    }
+
+    public function editMyFeedback($id){
+        $myfeed = Feedback::where('id', $id)->first();
+
+        return view('public.pages.extension.myfeedback.edit', compact('myfeed'));
+    }
+
+    public function updateMyFeedback(Request $request){
+        $this->validate($request, [
+            'comment' => 'min:5',
+            'rate' => 'required'
+        ], [
+                'comment.min' => 'Váš feedback je priliž krátky',
+                'rate.required' => 'Hodnotenie je povinné pole.'
+            ]
+        );
+
+        $myfeed = Feedback::findOrFail($request->id);
+        $myfeed->comment = $request->input('comment');
+        $myfeed->rate = $request->input('rate');
+        $myfeed->save();
+
+        return redirect()->route('myfeedback')
+            ->with('success', 'Vaša feedback bol upravený.');
     }
 
     // Contact Page //

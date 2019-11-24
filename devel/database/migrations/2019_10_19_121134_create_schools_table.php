@@ -15,12 +15,13 @@ class CreateSchoolsTable extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities');
             $table->string('name');
             $table->string('email');
             $table->string('url');
             $table->string('address');
             $table->string('postcode');
-
             $table->timestamps();
         });
     }

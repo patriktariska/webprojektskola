@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="float-right">
-                        <a href="#" class="pl-3 pr-3">Správa Feedbackov</a>
+                        <a href="{{ route('myfeedback') }}" class="pl-3 pr-3">Správa Feedbackov</a>
                         <a href="{{ route('logout') }}" class="pl-3 pr-3"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Odhlásiť
                             sa</a>
@@ -56,18 +56,16 @@
                             <a href="{{ url('/') }}">Domov</a>
                         </li>
                         <li class="has-children">
-                            <a href="destination.html">Destinácie</a>
+                        <a href="{{ route("public.mobility.challenges") }}">Výzvy</a>
                             <ul class="dropdown">
-                                <li><a href="#">Japan</a></li>
-                                <li><a href="#">Europe</a></li>
-                                <li><a href="#">China</a></li>
-                                <li><a href="#">France</a></li>
+                                <li><a href="#">Erasmus+</a></li>
+                                <li><a href="#">CEEPUS</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ url('about') }}">O nás</a></li>
                         <li><a href="{{ url('contact') }}">Kontakt</a></li>
                         <li><a href="{{ url('feed') }}">Feedback</a></li>
-                        <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white">Prihlás sa</a>
+                        <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white" target="_blank">Prihlás sa</a>
                         </li>
                     </ul>
                 </nav>
