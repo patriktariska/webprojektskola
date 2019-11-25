@@ -32,7 +32,7 @@
                             <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
                             <div class="text-left pt-3" style="line-height: 10px">
                                 <p style="font-size: 22px">{{ $challenge->name }}</p>
-                                <p>Typ: {{ $challenge->type }}</p>
+                                <p>Typ: {{ $challenge->Mobility->type }}</p>
                                 <p>Prihlášky do: {{ date_format(new DateTime($challenge->end),"d. m. Y") }}</p>
                                 <a class="btn btn-primary" href="{{ route('public.mobility.show',$challenge->id) }}" role="button" style="border-radius: 2px;">Detail výzvy</a>
                             </div>

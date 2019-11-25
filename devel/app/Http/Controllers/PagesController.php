@@ -15,10 +15,10 @@ class PagesController extends Controller
 {
     // Index Page //
     public function getIndex(){
-        $newChallenges = Challenge::with('School')->orderBy('created_at', 'desc')->take(3)->get();
-        $challenges = Challenge::with('School')->orderBy('end', 'asc')->take(6)->get();
+        $newChallenges = Challenge::with('Mobility')->orderBy('created_at', 'desc')->take(3)->get();
+        $challenges = Challenge::with('Mobility')->orderBy('end', 'asc')->take(6)->get();
         $feedback = Feedback::with('Student')->where('published', true)->get();
-        //return response()->json($feedback);
+        //return response()->json($newChallenges);
         return view('public.pages.index', compact('feedback', 'newChallenges', 'challenges'));
     }
 
@@ -30,12 +30,12 @@ class PagesController extends Controller
 
     // Mobility Page //
     public function getChallenge($id){
-        $getChallenge = Challenge::with('School')->where('id' , $id)->first();
+        $getChallenge = Challenge::with('Mobility', 'School')->where('id' , $id)->first();
         return view('public.pages.extension.mobility.show', compact('getChallenge'));
     }
 
     public function getAllChallenges(){
-        $getChallenges = Challenge::get();
+        $getChallenges = Challenge::with('Mobility')->get();
         return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
     }
 

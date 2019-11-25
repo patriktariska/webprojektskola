@@ -32,7 +32,7 @@
                             {!! $getChallenge->name !!}
                         </h1>
                         <p>
-                            {!! $getChallenge->type !!}
+                            {!! $getChallenge->Mobility->type !!}
                         </p>
                     </div>
                 </header>
