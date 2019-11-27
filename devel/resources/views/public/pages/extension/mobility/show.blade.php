@@ -32,7 +32,7 @@
                             {!! $getChallenge->name !!}
                         </h1>
                         <p>
-                            {!! $getChallenge->Mobility->type !!}
+                            {!! $getChallenge->mobility->type !!}
                         </p>
                     </div>
                 </header>
@@ -80,11 +80,13 @@
                             <th>Mesto</th>
                             <th>Kontaktná osoba</th>
                         </tr>
+                        @foreach($getChallenge->school as $skola)
                         <tr>
-                            <td><a href="http://www.kstu.kz/?lang=en">Karaganda State Technical University</a></td>
+                            <td><a href="http://www.kstu.kz/?lang=en">{{ $skola->name }}</a></td>
                             <td>Karaganda</td>
                             <td>Anastassiya Yudintseva</td>
                         </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

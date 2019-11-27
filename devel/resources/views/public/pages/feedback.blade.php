@@ -30,7 +30,7 @@
                 {{ Form::open(['route' => 'send.feedback', 'files' => 'true', 'method' => 'POST', 'class'=>'form']) }}
                 {{ csrf_field() }}
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7 bg-white">
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="email">Email:</label>

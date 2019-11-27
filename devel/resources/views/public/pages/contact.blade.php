@@ -29,7 +29,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ url('contact') }}" method="POST" class="p-5 bg-white">
+                    <form action="{{ url('contact') }}" method="POST" class="p-5 bg-white pb-0">
                         {{ csrf_field() }}
                         <div class="row form-group">
                             <div class="col-md-6 mb-3 mb-md-0">

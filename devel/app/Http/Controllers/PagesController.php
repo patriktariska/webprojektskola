@@ -31,6 +31,7 @@ class PagesController extends Controller
     // Mobility Page //
     public function getChallenge($id){
         $getChallenge = Challenge::with('Mobility', 'School')->where('id' , $id)->first();
+        //return response()->json($getChallenge);
         return view('public.pages.extension.mobility.show', compact('getChallenge'));
     }
 

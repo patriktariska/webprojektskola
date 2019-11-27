@@ -29,7 +29,7 @@
                     <div class="inner">
                         <h3>{{ $countMobility }}</h3>
 
-                        <p>Evidovaných mobilít</p>
+                        <p>Evidovaných výziev</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cubes"></i>
@@ -87,7 +87,7 @@
             <div class="col-md-6">
                 <div class="box box-danger">
                     <div class="box-header">
-                        <h3 class="box-title">Graf mobilít</h3>
+                        <h3 class="box-title">Graf výziev</h3>
                     </div>
                     <div class="box-body">
                         {!! $chart2->container() !!}

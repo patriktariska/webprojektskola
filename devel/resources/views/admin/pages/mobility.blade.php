@@ -2,10 +2,10 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Mobility
-            <small>správa mobilít</small>
+            Výzvy
+            <small>správa výziev</small>
             <a class="btn btn-app pull-right" href="{{ route('mobility.create') }}">
-                <i class="fa fa-plus"></i> Vytvor záznam mobility
+                <i class="fa fa-plus"></i> Vytvor záznam výzvy
             </a>
         </h1>
     </section>
@@ -15,7 +15,7 @@
             <div class="col-xs-12">
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Zoznam zaevidovaných mobilít</h3>
+                        <h3 class="box-title">Zoznam zaevidovaných výziev</h3>
                     </div>
                     <div class="box-body">
                         <table class="table table-bordered table-striped" id="mobility_datatable">

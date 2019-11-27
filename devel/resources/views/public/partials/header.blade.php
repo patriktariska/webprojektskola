@@ -52,19 +52,19 @@
             <div class="col-10 col-md-8 d-none d-xl-block">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                        <li class="active">
+                        <li class="{{ request()->is('/') ? 'active' : '' }}">
                             <a href="{{ url('/') }}">Domov</a>
                         </li>
-                        <li class="has-children">
+                        <li class="has-children {{ request()->is('challenge') ? 'active' : '' }}">
                         <a href="{{ route("public.mobility.challenges") }}">Výzvy</a>
                             <ul class="dropdown">
                                 <li><a href="#">Erasmus+</a></li>
                                 <li><a href="#">CEEPUS</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('about') }}">O nás</a></li>
-                        <li><a href="{{ url('contact') }}">Kontakt</a></li>
-                        <li><a href="{{ url('feed') }}">Feedback</a></li>
+                        <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ url('about') }}">O nás</a></li>
+                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}">Kontakt</a></li>
+                        <li class="{{ request()->is('feed') ? 'active' : '' }}"><a href="{{ url('feed') }}">Feedback</a></li>
                         <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white" target="_blank">Prihlás sa</a>
                         </li>
                     </ul>

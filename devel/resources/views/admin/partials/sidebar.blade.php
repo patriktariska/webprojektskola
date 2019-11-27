@@ -4,7 +4,7 @@
             <li class="header">Erazmus Program</li>
             <li class="{{ request()->is('dashboard') ? 'active' : '' }}"><a href="{{ url('/dashboard') }}"><i class="fa fa-bar-chart "></i> <span>Dashboard</span></a></li>
             <li class="{{ request()->is('dashboard/school') ? 'active' : '' }}"><a href="{{ url('/dashboard/school') }}"><i class="fa fa-graduation-cap "></i> <span>Školy</span></a></li>
-            <li class="{{ request()->is('dashboard/mobility') ? 'active' : '' }}"><a href="{{ url('/dashboard/mobility') }}"><i class="fa fa-map-signs "></i> <span>Mobility</span></a></li>
+            <li class="{{ request()->is('dashboard/mobility') ? 'active' : '' }}"><a href="{{ url('/dashboard/mobility') }}"><i class="fa fa-map-signs "></i> <span>Výzvy</span></a></li>
             <li class="{{ request()->is('dashboard/feedback') ? 'active' : '' }}"><a href="{{ url('/dashboard/feedback') }}"><i class="fa fa-bullhorn "></i> <span>Feedback</span></a></li>
 
             <li class="header">Manažment</li>

@@ -50,7 +50,7 @@ class PagesController extends Controller
 
         $chart2 = new SampleChart;
         $chart2->labels($getCountMobilitiesMonth->keys());
-        $chart2->dataset('Mobilít', 'line', $getCountMobilitiesMonth->values())->options([
+        $chart2->dataset('Výziev', 'line', $getCountMobilitiesMonth->values())->options([
             'backgroundColor' => ['#F7464A']]);
 
         $user = User::with('Roles')->whereIn('name', ['admin','devel'])->latest()->paginate(5);

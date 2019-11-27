@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="site-section">
+    {{-- <div class="site-section">
         <div class="container overlap-section">
             <div class="row">
                 @foreach($newChallenges as $challenge)
@@ -69,13 +69,13 @@
             </div>
         </div>
     </div>
-
+ --}}
     <div class="site-section">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center">
-                    <h2 class="font-weight-light text-black">Krajiny pobytu</h2>
-                    <p class="color-black-opacity-5">Vyber si svoju vysnívanú krajinu!</p>
+                    <h1 class="font-weight-light text-primary">Čoskoro končiace výzvy!</h1>
+                    <h5 class="color-black-opacity-5">Vyber si čím skôr!</h5>
                 </div>
             </div>
             <div class="row">
