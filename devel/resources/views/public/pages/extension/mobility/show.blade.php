@@ -176,6 +176,14 @@
                                 <li><a href="#after_travel" data-toggle="tab">Čo odovzdať po návrate</a></li>
                                 <li><a href="#messages" data-toggle="tab">Správy účastníkov</a>
                                 <li><a href="#photogallery" data-toggle="tab">Fotogaléria</a></li>
+                                @if(auth()->check())
+                                    {{ Form::open(['route' => 'interest.challenges',  'method' => 'POST', 'class'=>'form']) }}
+                                    {{ csrf_field() }}
+                                    <input type="hidden" value="{{ $getChallenge->id }}" name="getID">
+                                    <button type="submit" class="btn btn-primary">Prihlásiť sa na výzvu</button>
+                                    {{ Form::close() }}
+                                @endif
+
                             </ul>
                         </div>
                     </div>
@@ -193,13 +201,7 @@
                         </div>
                     @endif
                     <div class="tab-pane well active in active p-5 bg-light" id="info">
-                        @if(auth()->check())
-                            {{ Form::open(['route' => 'interest.challenges',  'method' => 'POST', 'class'=>'form']) }}
-                            {{ csrf_field() }}
-                                <input type="hidden" value="{{ $getChallenge->id }}" name="getID">
-                                <button type="submit" class="btn btn-primary">Mám záujem</button>
-                            {{ Form::close() }}
-                        @endif
+
                         <h3>Základné informácie</h3>
                         <p>
                             Univerzita UKF v Nitre stále rozširuje počet partnerských univerzít v zahraničí.
@@ -280,6 +282,7 @@
                     <div class="tab-pane well fade p-5 bg-light" id="photogallery">
                         <h3>Fotogaléria</h3>
                         <div class="content gallery">
+
                             <a href="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/slider1-1024x480.jpg"
                                title="" class="fancybox" rel="group1">
                                 <img src="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/slider1-197x160.jpg"
@@ -296,6 +299,8 @@
                                      alt="" width="197" height="160">
                             </a>
                         </div>
+
+
                     </div>
 
                 </div> <!-- tab-content col-lg-9 col-sm-6 col-xs-12 pageContent -->
