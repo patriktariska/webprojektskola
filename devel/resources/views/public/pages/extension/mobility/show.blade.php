@@ -176,14 +176,15 @@
                                 <li><a href="#after_travel" data-toggle="tab">Čo odovzdať po návrate</a></li>
                                 <li><a href="#messages" data-toggle="tab">Správy účastníkov</a>
                                 <li><a href="#photogallery" data-toggle="tab">Fotogaléria</a></li>
+                                <li>
                                 @if(auth()->check())
                                     {{ Form::open(['route' => 'interest.challenges',  'method' => 'POST', 'class'=>'form']) }}
                                     {{ csrf_field() }}
                                     <input type="hidden" value="{{ $getChallenge->id }}" name="getID">
-                                    <button type="submit" class="btn btn-primary">Prihlásiť sa na výzvu</button>
+                                    <button type="submit" style="width: 100%; border-radius: 7px;" class="btn btn-primary">Mám záujem o výzvu</button>
                                     {{ Form::close() }}
                                 @endif
-
+                                </li>
                             </ul>
                         </div>
                     </div>
