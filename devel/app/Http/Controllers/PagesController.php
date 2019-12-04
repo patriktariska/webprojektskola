@@ -28,9 +28,10 @@ class PagesController extends Controller
         return view('public.pages.about');
     }
 
-    // Mobility Page //
+    // Challenge Page //
     public function getChallenge($id){
         $getChallenge = Challenge::with('Mobility', 'School')->where('id' , $id)->first();
+
         //return response()->json($getChallenge);
         return view('public.pages.extension.mobility.show', compact('getChallenge'));
     }
@@ -38,6 +39,14 @@ class PagesController extends Controller
     public function getAllChallenges(){
         $getChallenges = Challenge::with('Mobility')->get();
         return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
+    }
+
+    public function interestChallenge(Request $request){
+        $user = Auth::user();
+        $user->Challenge()->attach($request->input('getID'));
+
+        return redirect()->back()
+            ->with('success', 'Prejavili ste záujem o výzvu.');
     }
 
     // Feedback Page //

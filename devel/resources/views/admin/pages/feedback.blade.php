@@ -10,6 +10,30 @@
     <section class="content">
         <div class="row">
             <div class="col-md-5">
+                @if ($message = Session::get('success'))
+                    <div class="panel-body">
+                        <div class="alert alert-dismissible callout callout-success">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
+                            </button>
+                            <h4>Výborne.</h4>
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="panel-body">
+                        <div class="alert alert-dismissible callout callout-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
+                            </button>
+                            <h4>Chyba !</h4>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
                 <div id="message-success"></div>
             </div>
             <div class="col-xs-12">
@@ -22,7 +46,6 @@
                             <thead>
                             <tr>
                                 <th>id</th>
-
                                 <th>Fotka</th>
                                 <th>Email študenta</th>
                                 <th>Odporúčanie</th>
@@ -48,39 +71,4 @@
             </div>
         </div>
     </section>
-
-    {{--Definition Modal--}}
-    <div class="modal fade" id="ajax-feedback" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="feedbackCrudModal"></h4>
-                </div>
-                <div class="modal-body">
-                    <div id="message-danger"></div>
-                    <form id="feedbackForm" name="feedbackForm" class="form-horizontal">
-                        <input type="hidden" name="feedback_id" id="feedback_id">
-
-                        <div class="form-group">
-                            <label class="col-sm-12" for="name">Publikovaný:</label>
-                            <div class="col-sm-12">
-                                <input class="pub" type="checkbox" data-toggle="toggle" name="published" id="published" data-on="Publikovaný" data-off="Nepublikovaný">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Zatvor
-                            </button>
-                            <button type="submit" class="btn btn-success pull-right" id="btn-save" value="create"
-                                    data-toggle="modal"
-                                    data-target="#create"><i
-                                        class="fa fa-edit"></i> Pridaj záznam
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer"></div>
-            </div>
-        </div>
-    </div>
-
 @endsection

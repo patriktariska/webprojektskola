@@ -330,6 +330,13 @@
             order: [[0, 'desc']],
         });
 
+        //SHOW FEEDBACK
+        $(document).on('click', '.showItem', function (event) {
+            var feedback_id = $(this).data('id');
+            event.preventDefault();
+            window.location = window.location + '/' + feedback_id;
+        });
+
         //AJAX DELETE FEEDBACK
         $('body').on('click', '#delete-feedback', function () {
             var feedback_id = $(this).data("id");

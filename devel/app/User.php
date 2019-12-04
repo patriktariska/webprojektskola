@@ -28,12 +28,16 @@ class User extends Authenticatable
     public function Roles(){
         return $this->belongsToMany('App\Role')->withTimestamps();
     }
+    public function Challenge(){
+        return $this->belongsToMany('App\Challenge' , 'student_challenges')->withTimestamps();
+    }
     public function Feeds(){
         return $this->hasMany('App\Feedback');
     }
     public function Logs(){
         return $this->hasMany('App\LogActivity');
     }
+
 
     // Method Roles Permisions
     public function hasAnyRoles($roles){

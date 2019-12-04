@@ -18,6 +18,10 @@ class Challenge extends Model
         return $this->belongsToMany('App\School' , 'challenge_schools')->withTimestamps();
     }
 
+    public function Student(){
+        return $this->belongsToMany('App\User' , 'student_challenges')->withTimestamps();
+    }
+
     public function Feedback(){
         return $this->$this->hasMany('App\Feedback');
     }

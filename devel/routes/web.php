@@ -24,6 +24,7 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     Route::get('/', 'Admin\PagesController@index')->name('dashboard');
 
     /*Feedback page route*/
+    Route::get('feedback/{feedback}', 'Admin\FeedbackController@show')->name('feedback.show');
     Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');
     Route::get('feedback/{id}/edit', 'Admin\FeedbackController@edit')->name('feedback.edit');
     Route::post('feedback/update', 'Admin\FeedbackController@update')->name('feedback.update');
@@ -63,6 +64,7 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
 
     Route::get('/challenge/{challenge}', 'PagesController@getChallenge')->name('public.mobility.show');
     Route::get('challenge', 'PagesController@getAllChallenges')->name('public.mobility.challenges');
+    Route::post('interest', 'PagesController@interestChallenge')->name('interest.challenges');
 
     /*About page route*/
     Route::get('about', 'PagesController@getAbout')->name('about.index');

@@ -21,10 +21,10 @@ class FeedbackController extends Controller
             return datatables()->of(Feedback::with('Student')->get())
                 ->addColumn('action', function ($row) {
                     $btn = '<a href="javascript:void(0)" data-toggle="tooltip" 
-                     data-id="' . $row->id . '" data-original-title="Edit" 
-                     class="edit btn btn-xs btn-warning edit-feedback"><i class="fa fa-edit"></i></a>';
+                    data-id="' . $row->id . '" class="btn btn-xs btn-warning showItem">
+                    <i class="fa fa-edit"></i></a>';
 
-                    $btn = $btn. ' <a href="javascript:void(0)" data-toggle="tooltip" 
+                    $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip" 
                      data-id="' . $row->id . '" data-original-title="Delete" id="delete-feedback"
                       class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>';
                     return $btn;
@@ -37,26 +37,29 @@ class FeedbackController extends Controller
         return view('admin.pages.feedback');
     }
 
-    public function edit($id)
+    public function show(Feedback $feedback)
     {
-        $where = array('id' => $id);
-        $feedback = Feedback::where($where)->first();
+        $getFeedback = Feedback::where('id', '=', $feedback->id)->with('Student', 'Challenge')->first();
 
-        return response()->json($feedback);
+        LogActivity::addToLog('Zobrazenie detailu feedbacku');
+        return view('admin.pages.extension.feedback.show', compact('getFeedback'));
     }
 
     public function update(Request $request)
     {
-        $feedbackId= $request->feedback_id;
-        $feedback = Feedback::updateOrCreate(
+        if($request->input('published') == true){
+            $feedback = Feedback::findOrFail($request->input('id'));
+            $feedback->published = true;
+            $feedback->save();
 
-            ['id' => $feedbackId],
-            [
-               'published' => $request->input('published')
-            ]);
+         }else{
+            $feedback = Feedback::findOrFail($request->input('id'));
+            $feedback->published = false;
+            $feedback->save();
+        }
 
         LogActivity::addToLog('Úprava status feedbacku');
-        return response()->json($feedback);
+        return redirect()->route('feedback.index')->with('success', 'Úspešne zmenený status feedbacku.');
     }
 
     public function destroy($id)
