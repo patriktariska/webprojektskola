@@ -58,8 +58,8 @@
                         <li class="has-children {{ request()->is('challenge') ? 'active' : '' }}">
                         <a href="{{ route("public.mobility.challenges") }}">Výzvy</a>
                             <ul class="dropdown">
-                                <li><a href="#">Erasmus+</a></li>
-                                <li><a href="#">CEEPUS</a></li>
+                                <li><a href="{{ route("public.mobility.erasmus") }}">Erasmus+</a></li>
+                                <li><a href="{{ route("public.mobility.ceepus") }}">CEEPUS</a></li>
                             </ul>
                         </li>
                         <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ url('about') }}">O nás</a></li>

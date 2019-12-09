@@ -64,6 +64,8 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
 
     Route::get('/challenge/{challenge}', 'PagesController@getChallenge')->name('public.mobility.show');
     Route::get('challenge', 'PagesController@getAllChallenges')->name('public.mobility.challenges');
+    Route::get('erasmus', 'PagesController@getErasmusChallenges')->name('public.mobility.erasmus');
+    Route::get('ceepus', 'PagesController@getCeepusChallenges')->name('public.mobility.ceepus');
     Route::post('interest', 'PagesController@interestChallenge')->name('interest.challenges');
 
     /*About page route*/

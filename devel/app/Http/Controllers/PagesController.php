@@ -37,7 +37,22 @@ class PagesController extends Controller
     }
 
     public function getAllChallenges(){
-        $getChallenges = Challenge::with('Mobility')->get();
+        $getChallenges = Challenge::with('Mobility')->orderBy('end', 'asc')->get();
+        return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
+    }
+
+    public function getErasmusChallenges(){
+        $getChallenges = Challenge::with('Mobility')->whereHas('Mobility', function($query) {
+            $query->where('type', '=', 'Erasmus+');
+        })->get();
+        return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
+    }
+
+    public function getCeepusChallenges(){
+        $getChallenges = Challenge::with('Mobility')->whereHas('Mobility', function($query) {
+            $query->where('type', '=', 'CEEPUS');
+        })->get();
+        //return response()->json($getChallenges);
         return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
     }
 
