@@ -32,7 +32,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Škola</label>
-                                    <select class="form-control select2" name="school_id" id="school_id">
+                                    <select class="form-control select2"  multiple="multiple" name="school_id[]" id="school_id">
                                         @foreach($school as $School)
                                             <option value="{{ $School->id }}">{{ $School->name }}
                                                 , {{ $School->address }}, {{ $School->email }}</option>

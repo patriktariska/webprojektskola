@@ -85,7 +85,9 @@ class MobilityController extends Controller
         $mobility->end = $request->input('end');
         $mobility->save();
 
-        $mobility->School()->attach($request->input('school_id'));
+        foreach ($request->school_id as $type) {
+            $mobility->School()->attach($type);
+        }
 
         LogActivity::addToLog('Pridanie novej mobility');
         return redirect()->route('mobility.index')->with('Success', 'Úspešne zaevidovaná mobilita');
@@ -128,7 +130,9 @@ class MobilityController extends Controller
         $mobility->end = $request->input('end');
         $mobility->save();
 
-        $mobility->School()->attach($request->input('school_id'));
+        foreach ($request->school_id as $type) {
+            $mobility->School()->attach($type);
+        }
 
         LogActivity::addToLog('Úprava mobility');
         return redirect()->route('mobility.index')->with('Success', 'Úspešne upravená mobilita');
