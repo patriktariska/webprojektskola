@@ -131,6 +131,12 @@
                                             <button type="submit" class="btn btn-primary float-right">
                                                 Login
                                             </button>
+                                            <div>
+                                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                    Zabudnuté heslo?
+                                                </a>
+                                                <a href="{{ route('register') }}" class="btn btn-link">Registrácia</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
