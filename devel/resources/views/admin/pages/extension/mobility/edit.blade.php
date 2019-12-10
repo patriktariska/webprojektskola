@@ -1,5 +1,16 @@
 @extends('admin.layouts.default')
 @section('content')
+    <style>
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #0792e2 !important;
+            border-color: #367fa9 !important;
+            border: 1px solid #367fa9 !important;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #FFF !important;
+        }
+    </style>
+
     <section class="content-header">
         <h1>
             Mobility
@@ -33,7 +44,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Škola</label>
-                                    <select class="form-control select2" name="school_id" id="school_id">
+                                    <select class="form-control select2"  multiple="multiple" name="school_id[]" id="school_id">
                                         @foreach($school as $School)
                                             <option value="{{ $School->id }}"  {{ $School->id == $selectedID ? 'selected="selected"' : '' }}>{{ $School->name }}
                                                 , {{ $School->address }}, {{ $School->email }}</option>

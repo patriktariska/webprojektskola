@@ -136,7 +136,6 @@ class MobilityController extends Controller
 
         LogActivity::addToLog('Úprava mobility');
         return redirect()->route('mobility.index')->with('Success', 'Úspešne upravená mobilita');
-
     }
 
     public function destroy($id)

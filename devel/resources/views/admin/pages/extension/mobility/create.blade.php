@@ -1,5 +1,16 @@
 @extends('admin.layouts.default')
 @section('content')
+    <style>
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #0792e2 !important;
+            border-color: #367fa9 !important;
+            border: 1px solid #367fa9 !important;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #FFF !important;
+        }
+    </style>
+
     <section class="content-header">
         <h1>
             Mobility
