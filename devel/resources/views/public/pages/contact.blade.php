@@ -29,7 +29,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ url('contact') }}" method="POST" class="p-5 bg-white pb-0">
+                    <form action="{{ url('contact') }}" method="POST" class="p-5 bg-white pb-0 border shadow" >
                         {{ csrf_field() }}
                         <div class="row form-group">
                             <div class="col-md-6 mb-3 mb-md-0">
@@ -69,7 +69,7 @@
                     </form>
                 </div>
                 <div class="col-md-5">
-                    <div class="p-4 mb-3 bg-white">
+                    <div class="p-4 mb-3 bg-white border shadow">
                         <h4>Univerzita Konštantína Filozofa v Nitre</h4>
                         <img src="{{ asset('public/dist/images/img_contact.jpg') }}" alt="Image" class="img-fluid mb-4 rounded">
                         <p class="mb-0 font-weight-bold">Adresa</p>

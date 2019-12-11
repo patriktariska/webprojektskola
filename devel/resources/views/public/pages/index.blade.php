@@ -81,13 +81,14 @@
             <div class="row">
                 @foreach($challenges as $challenge)
                     <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
-                        <div class="container border pt-3 pb-3" style="border-radius: 20px">
+                        <div class="container border pt-3 pb-3 border shadow" >
                             <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
                             <div class="text-left pt-3" style="line-height: 10px">
                                 <p style="font-size: 22px">{{ $challenge->name }}</p>
                                 <p>Typ: {{ $challenge->Mobility->type }}</p>
+                                <p>Ostávajúca kapacita: {{ $challenge->capacity }}</p>
                                 <p>Prihlášky do: {{ date_format(new DateTime($challenge->end),"d. m. Y") }}</p>
-                                <a class="btn btn-primary" href="{{ route('public.mobility.show',$challenge->id) }}" role="button" style="border-radius: 2px;">Detail výzvy</a>
+                                <a class="btn btn-primary" href="{{ route('public.mobility.show',$challenge->id) }}" role="button" style="border-radius: 7px;">Detail výzvy</a>
                             </div>
                         </div>
                     </div>
@@ -202,7 +203,7 @@
                 </div>
             </div>
             @if (!$feedback->isEmpty())
-                <div class="nonloop-block-13 owl-carousel">
+                <div class="nonloop-block-13 owl-carousel border shadow p-4">
                     @foreach ($feedback as $Feedback)
                         <div class="item">
                             <div class="container">

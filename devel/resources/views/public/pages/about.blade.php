@@ -2,7 +2,7 @@
 @section('content')
     <div class="site-section bg-light">
         <h1 class="text-primary"><center>Univerzita Konštantína Filozofa v Nitre</center></h1>
-        <div class="container bg-white pb-3">
+        <div class="container bg-white pb-3 border shadow">
                 <br class="p-4 mb-3 bg-white">
                     <div class="slide-one-item home-slider owl-carousel">
                     <div class="site-blocks-cover overlay" style="background-image: url({{ asset('public/dist/images/ukf1.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5">

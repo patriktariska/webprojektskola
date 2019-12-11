@@ -30,7 +30,7 @@
                 {{ Form::open(['route' => 'send.feedback', 'files' => 'true', 'method' => 'POST', 'class'=>'form']) }}
                 {{ csrf_field() }}
                 <div class="row">
-                    <div class="col-md-7 bg-white">
+                    <div class="col-md-7 bg-white border shadow p-4" >
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="email">Email:</label>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="p-4 mb-3 bg-white">
+                        <div class="p-4 mb-3 bg-white border shadow">
                             <h6>Zaznamenal / a si svoj zážitok v podobe fotky ? Pošli nám ju a mi ju pridáme ku tvojmu
                                 feedbacku</h6>
                             <input type="file" name="myFile" class="form-control" required>

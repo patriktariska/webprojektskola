@@ -64,6 +64,13 @@ class PagesController extends Controller
             ->with('success', 'Prejavili ste záujem o výzvu.');
     }
 
+    public function getMyChallenges(){
+        $myChallenges = Challenge::with('User')->whereHas('User', function($query){
+            $query->where('id', '=', Auth::user()->id);
+        });
+        return view('public.pages.mychallenges', compact('myChallenges'));
+    }
+
     // Feedback Page //
     public function getFeedback()
     {
