@@ -44,14 +44,14 @@ class PagesController extends Controller
     public function getErasmusChallenges(){
         $getChallenges = Challenge::with('Mobility')->whereHas('Mobility', function($query) {
             $query->where('type', '=', 'Erasmus+');
-        })->get();
+        })->orderBy('end', 'asc')->get();
         return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
     }
 
     public function getCeepusChallenges(){
         $getChallenges = Challenge::with('Mobility')->whereHas('Mobility', function($query) {
             $query->where('type', '=', 'CEEPUS');
-        })->get();
+        })->orderBy('end', 'asc')->get();
         //return response()->json($getChallenges);
         return view('public.pages.extension.mobility.challenges', compact('getChallenges'));
     }
