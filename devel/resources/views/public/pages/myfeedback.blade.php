@@ -1,5 +1,13 @@
 @extends('public.layouts.default')
 @section('content')
+
+    <style>
+        ul.pagination li{
+            letter-spacing: 7px;
+            font-weight: bold;
+        }
+    </style>
+
     <div class="site-section bg-light">
         <div class="container">
             @if ($message = Session::get('success'))
@@ -27,13 +35,14 @@
                 </div>
             @endif
             @if(auth()->check())
-                        <table id="myfeedback_table" class="table table-bordered table-striped">
+                <h4>Zoznam mojich feedbackov</h4>
+                        <table id="myfeedback_table" class="table table-striped table-bordered" style="width:100%;">
                             <thead>
                             <tr>
-                                <th>Fotka</th>
+                                <th>Fotografia</th>
                                 <th>Komentár</th>
                                 <th>Odporúčanie</th>
-                                <th>Vytvorený feedback</th>
+                                <th>Publikácia</th>
                                 <th>Akcia</th>
                             </tr>
                             </thead>
@@ -45,23 +54,13 @@
                                     <td>{{ $Feedback->rate }}</td>
                                     <td>{{ $Feedback->created_at }}</td>
                                     <td>
-                                         <a href="{{ route('myfeedback.edit' , $Feedback->id) }}" >Edit</a>
-
+                                         <a href="{{ route('myfeedback.edit' , $Feedback->id) }}" title="Edit"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th>Fotka</th>
-                                <th>Komentár</th>
-                                <th>Odporúčanie</th>
-                                <th>Vytvorený feedback</th>
-                                <th>Akcia</th>
-                            </tr>
-                            </tfoot>
                         </table>
-                    {{ $feedback->links() }}
+                        {{ $feedback->links() }}
             @else
                 <div class="row">
                     <div class="col-md-7">
