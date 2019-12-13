@@ -35,8 +35,8 @@
                 </div>
             @endif
             @if(auth()->check())
-                <h4>Zoznam mojich feedbackov</h4>
-                        <table id="myfeedback_table" class="table table-striped table-bordered" style="width:100%;">
+            <h4>Feedbacky od študenta {{ $studentName }}</h4>
+                        <table id="myfeedback_table" class="table table-striped table-bordered border shadow" style="width:100%;">
                             <thead>
                             <tr>
                                 <th>Fotografia</th>
@@ -64,13 +64,13 @@
             @else
                 <div class="row">
                     <div class="col-md-7">
-                        <h4>Pre zobrazenie feedback listu sa musiš prihlásiť</h4>
+                        <h4>Pre zobrazenie odoziev sa musiš prihlásiť</h4>
                     </div>
                     <div class="col-md-5">
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">E-Mail adresa</label>
 
                                 <div class="col-md-12">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -84,7 +84,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">Heslo</label>
 
                                 <div class="col-md-12">
                                     <input id="password" type="password" class="form-control" name="password" required>
@@ -101,10 +101,10 @@
                                 <div class="col-md-12 col-md-offset-4">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Zapamätať
                                         </label>
                                         <button type="submit" class="btn btn-primary float-right">
-                                            Login
+                                            Prihlásiť
                                         </button>
                                     </div>
                                 </div>

@@ -28,6 +28,13 @@ class PagesController extends Controller
         return view('public.pages.about');
     }
 
+    // Login page //
+
+    public function getLogin()
+    {
+        return view('auth.login');
+    }
+
     // Challenge Page //
     public function getChallenge($id){
         $getChallenge = Challenge::with('Mobility', 'School')->where('id' , $id)->first();
@@ -64,11 +71,25 @@ class PagesController extends Controller
             ->with('success', 'Prejavili ste záujem o výzvu.');
     }
 
+    public function undointerestChallenge(Request $request){
+        $user = Auth::user();
+        $user->Challenge()->detach($request->input('getID'));
+        
+        return redirect()->back()
+            ->with('success', 'Zrušili ste záujem o výzvu.');
+    }
+
     public function getMyChallenges(){
-        $myChallenges = Challenge::with('User')->whereHas('User', function($query){
-            $query->where('id', '=', Auth::user()->id);
-        });
-        return view('public.pages.mychallenges', compact('myChallenges'));
+        if(Auth::user()){
+            $myChallenges = Challenge::with('Student')->whereHas('Student', function($query){
+                $query->where('user_id', '=', Auth::user()->id);
+            })->get();
+            $studentName = Auth::user()->name . ' ' . Auth::user()->lname;
+            return view('public.pages.mychallenges', compact('myChallenges', 'studentName'));
+        }
+        
+        //return response()->json($myChallenges);
+        return view('public.pages.mychallenges');
     }
 
     // Feedback Page //
@@ -81,7 +102,8 @@ class PagesController extends Controller
     {
         if(Auth::user()){
             $feedback = Feedback::where('user_id', Auth::user()->id)->latest()->paginate(6);
-            return view('public.pages.myfeedback', compact('feedback'));
+            $studentName = Auth::user()->name . ' ' . Auth::user()->lname;
+            return view('public.pages.myfeedback', compact('feedback', 'studentName'));
         }
         return view('public.pages.myfeedback');
     }

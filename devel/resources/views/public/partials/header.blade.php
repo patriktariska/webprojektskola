@@ -66,8 +66,11 @@
                         </li>
                         <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ url('about') }}">O nás</a></li>
                         <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}">Kontakt</a></li>
-                        <li class="{{ request()->is('feed') ? 'active' : '' }}"><a href="{{ url('feed') }}">Feedback</a></li>
-                        <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white" target="_blank">Prihlás sa</a>
+                        <li class="{{ request()->is('feed') ? 'active' : '' }}"><a href="{{ url('feed') }}">Odozva</a></li>
+                        @if(!Auth::check())
+                        <li class="{{ request()->is('prihlas') ? 'active' : '' }}"><a href="{{ url('prihlas') }}">Prihlásenie</a></li>
+                        @endif
+                        <li><a href="https://studyabroad.sk" class="btn btn-primary py-1 px-2 text-white" target="_blank">Prihlás sa na výzvu</a>
                         </li>
                     </ul>
                 </nav>

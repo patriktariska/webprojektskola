@@ -1,5 +1,13 @@
 @extends('public.layouts.default')
 @section('content')
+
+    <style>
+        ul.pagination li{
+            letter-spacing: 7px;
+            font-weight: bold;
+        }
+    </style>
+
     <div class="site-section bg-light">
         <div class="container">
             @if ($message = Session::get('success'))
@@ -27,24 +35,29 @@
                 </div>
             @endif
             @if(auth()->check())
-                        <table id="myfeedback_table" class="table table-bordered table-striped">
+            <h4>Prihlásené výzvy študenta {{ $studentName }}</h4>
+                        <table id="myfeedback_table" class="table table-bordered table-striped border shadow">
                             <thead>
                             <tr>
-                                <th>Meno</th>
-                                <th>Info</th>
+                                <th>Názov výzvy:</th>
                                 <th>Kapacita</th>
+                                <th>Prihlášky do:</th>
                                 <th>Akcia</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($myChallenges as $challenge)
                                 <tr>
-                                    <td>{{ $challenge->comment }}</td>
-                                    <td>{{ $challenge->rate }}</td>
-                                    <td>{{ $challenge->created_at }}</td>
+                                    <td>{{ $challenge->name }}</td>
+                                    <td>{{ $challenge->capacity }}</td>
+                                    <td>{{ $challenge->end }}</td>
                                     <td>
-                                         <!--<a href="{{ route('myfeedback.edit' , $challenge->id) }}" >Edit</a>-->
-
+                                        {{ Form::open(['route' => 'undointerest.challenges',  'method' => 'POST', 'class'=>'form']) }}
+                                        {{ csrf_field() }}
+                                        <input type="hidden" value="{{ $challenge->id }}" name="getID">
+                                        <button class="btn btn-outline-primary" type="submit" title="Nemám záujem"><i class="fa fa-minus-square"></i> Zrušiť</button>
+                                        <!-- <button type="submit" style="width: 100%; border-radius: 7px;" class="btn btn-primary">Mám záujem o výzvu</button> -->
+                                        {{ Form::close() }}
                                     </td>
                                 </tr>
                             @endforeach
@@ -53,7 +66,7 @@
             @else
                 <div class="row">
                     <div class="col-md-7">
-                        <h4>Pre zobrazenie feedback listu sa musiš prihlásiť</h4>
+                        <h4>Pre zobrazenie výziev sa musiš prihlásiť</h4>
                     </div>
                     <div class="col-md-5">
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">

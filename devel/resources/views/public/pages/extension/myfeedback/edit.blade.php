@@ -30,7 +30,7 @@
                 {{ Form::open(['route' => ['myfeedback.update'], 'method' => 'POST', 'class'=>'form']) }}
                 {{ csrf_field() }}
                 <div class="row">
-                    <div class="col-md-7 bg-white p-4 mb-3">
+                    <div class="col-md-7 bg-white p-4 mb-3 border shadow">
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <input type="hidden" value="{{ $myfeed->id }}" name="id" id="id">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="p-4 mb-3 bg-white">
+                        <div class="p-4 mb-3 bg-white border shadow">
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label class="text-black" for="subject">Hodnotenie:</label>

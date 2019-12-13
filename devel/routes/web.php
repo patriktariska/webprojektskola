@@ -67,15 +67,23 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     Route::get('erasmus', 'PagesController@getErasmusChallenges')->name('public.mobility.erasmus');
     Route::get('ceepus', 'PagesController@getCeepusChallenges')->name('public.mobility.ceepus');
     Route::post('interest', 'PagesController@interestChallenge')->name('interest.challenges');
+    Route::post('undointerest', 'PagesController@undointerestChallenge')->name('undointerest.challenges');
 
     /*About page route*/
     Route::get('about', 'PagesController@getAbout')->name('about.index');
+
+    Route::get('prihlas', 'PagesController@getLogin')->name('prihlas.index');
+
+  
+
+    /*Challenge route*/
+    Route::get('mychallenge', 'PagesController@getMyChallenges')->name('mychallenges');
+    Route::get('mychallenge/{id}/delete', 'PagesController@deleteMyChallenge')->name('deleteMyChallenge');
 
     /*Feedback page route*/
     Route::get('feed', 'PagesController@getFeedback');
     Route::post('feed', 'PagesController@sendFeedback')->name('send.feedback');
     Route::get('myfeed', 'PagesController@getMyFeedback')->name('myfeedback');
-    Route::get('mychallenge', 'PagesController@getMyChallenges')->name('mychallenges');
     Route::get('myfeed/{id}/edit' , 'PagesController@editMyFeedback')->name('myfeedback.edit');
     Route::post('myfeed', 'PagesController@updateMyFeedback')->name('myfeedback.update');
 
