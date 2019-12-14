@@ -147,7 +147,7 @@
     <section>
 
         <div class="container-fluid main detail "
-             style="background-image: url('http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/kazach_siberia-63182-1920x1176.jpg')">
+             style="background-image: url('{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}')">
             <div class="centered">
                 <header>
                     <div>
@@ -169,7 +169,7 @@
                     <div class="box">
                         <div>
                             <ul class="nav tab-menu nav-pills nav-stacked pr15">
-                                <li><a class="active" href="#info" data-toggle="tab">Základné informácie</a></li>
+                                <li><a href="#info" data-toggle="tab">Základné informácie</a></li>
                                 <li><a href="#universities" data-toggle="tab">Partnerské univerzity</a></li>
                                 <li><a href="#conditions" data-toggle="tab">Podmienky vycestovania</a></li>
                                 <li><a href="#before_travel" data-toggle="tab">Čo zariadiť pred výjazdom</a></li>
@@ -201,107 +201,109 @@
                             </div>
                         </div>
                     @endif
-                    <div class="tab-pane well active in active p-5 bg-light" id="info">
-
+                    <div class="tab-pane well active in active p-5 bg-light" id="info" style="text-align: justify;">
                         <h3>Základné informácie</h3>
                         <p>
-                            Univerzita UKF v Nitre stále rozširuje počet partnerských univerzít v zahraničí.
+                            {!! $getChallenge->description !!}
                         </p>
                         <p>
-                            {!! $getChallenge->description !!}
+                            <h6>Prihlasovať sa môžete do <strong>{{ date('d.m.Y', strtotime($getChallenge->end)) }}</strong>.</h6>
                         </p>
                     </div>
 
                     <div class="tab-pane well fade box p-5 bg-light" id="universities">
                         <h3>Partnerské univerzity</h3>
-                        <table style="width:100%;">
+                        <table style="width:100%;" class="table table-striped table-bordered border shadow">
                             <tbody>
                             <tr>
                                 <th>Univerzita</th>
                                 <th>Mesto</th>
-                                <th>Kontaktná osoba</th>
+                                <th>Krajina</th>
+                                <th>Kontakt</th>
                             </tr>
-                            @foreach($getChallenge->school as $skola)
+                            @foreach($getChallenge->school as $Skola)
                                 <tr>
-                                    <td><a href="http://www.kstu.kz/?lang=en">{{ $skola->name }}</a></td>
-                                    <td>Karaganda</td>
-                                    <td>Anastassiya Yudintseva</td>
+                                    <td><a href="{{ $Skola->url }}" target="_blank">{{ $Skola->name }}</a></td>
+                                    <td>{{ $Skola->city_id }}</td>
+                                    <td>{{ $Skola->city_id }}</td>
+                                    <td>{{ $Skola->email }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="tab-pane well fade p-5 bg-light" id="conditions">
+                    <div class="tab-pane well fade p-5 bg-light" id="conditions" style="text-align: justify;">
                         <h3>Podmienky vycestovania</h3>
                         <p>Študent musí mať absolvovaný minimálne prvý ročník štúdia na UKF, tzn. musí byť v dobe
                             výjazdu zapísaný do vyššieho ročníka ako je prvý. Výnimkou sú študenti prvého ročníka
                             nadvezujúceho magisterského štúdia, ktorí absolvovali bakalarské štúdium na UKF.&nbsp;</p>
-                        <p>Výber studentů bude proveden na úvodní schůzce na základě indexu, který odráží počet kreditů
-                            získaných v&nbsp;jednotlivých letech studia na FIM UHK a průměrný prospěch (údaje v systému
-                            STAG k&nbsp;31. 8. 2016). Aby bylo možné obě kvantitativní charakteristiky sloučit, index je
-                            dán počtem získaných kreditů lomeno průměrný prospěch, a to zprůměrováno přes jednotlivé
-                            roky studia.</p>
-                        <p>Vyjádřeno formálně</p>
-                        <p><img class="aligncenter" title="index_143"
-                                src="http://fim.uhk.cz/mobility2/data/images/text/index_143.jpg" alt="index_143"
-                                width="143" height="74"></p>
-                        <p>kde Ki&nbsp;je počet kreditů získaných v&nbsp;i-tém roce, Pi&nbsp;je průměrný prospěch v&nbsp;i-tém
-                            roce a n je počet ukončených roků studia. Na základě takto vypočteného indexu bude vytvořeno
-                            pořadí, které bude rozhodující pro udělení stipendií.</p>
-                        <p>Po celé období studijního pobytu v zahraničí musí být student řádně zapsán ke studiu na
-                            vysílající instituci, nemůže tedy ukončit studium před ukončením studijního pobytu v
-                            zahraničí.</p>
+                        <p>Výber študentov sa uskutoční na úvodnej schôdzke na základe indexu, ktorý odráža počet kreditov
+                            získaných v&nbsp;jednotlivých rokoch štúdia na UKF a priemerný prospech. Aby bolo možné obe kvantitatívne charakteristiky zlúčiť, index je
+                            daný počtom získaných kreditov lomeno priemerný prospech, a to zpriemerované cez jednotlivé
+                            roky študia.</p>
+                        <p>Po celé obdobie študijiného pobytu v zahraničí musí byť študent riadne zapísaný ku štúdiu na
+                            poslanú inštitúciu, nemôže teda ukončiť štúdium pred ukončením študijiného pobytu v zahraničí.</p>
                     </div>
 
                     <div class="tab-pane well fade p-5 bg-light" id="before_travel">
                         <h3>Čo zariadiť pred výjazdom</h3>
-                        <p>Odevzdat přihlášku ke studiu na zahraniční univerzitě na zahr. oddělení FIM.</p>
-                        <p>Očkování – Fakultní nemocnice, Centrum očkování a cestovní medicíny.</p>
-                        <p>Cestovní pojištění na celou dobu pobytu. Musí být v souladu se <a
-                                    href="http://fim.uhk.cz/mobility2/data/doc/erasmus/student/stahuj/smernice2_2013.pdf">směrnicí
-                                kvestora č. 2/2013</a>.</p>
-                        <p>Vízum.</p>
-                        <p>Zakoupit letenku. </p>
-                        <p>Podepsat finanční dohodu, ve které jsou specifikovány podmínky stáže a udělení stipendia.</p>
+                        <p>1) Odovzdať prihlášku ku štúdiu na zahraničnú univerzitu na oddelení UKF.</p>
+                        <p>2) Očkovanie ak je potrebné, alebo poradanstvo ohľadom možných chôrob a užívania liekov.</p>
+                        <p>3) Cestovné poistenie na celú dobu pobytu.</p>
+                        <p>4) Vízum ak je to potrebné.</p>
+                        <p>5) Zakúpiť letenku alebo iný cestostovný doklad.</p>
+                        <p>6) Podpísať finančnú dohodu, v kterej sú špecifikované podmienky stáže a udelenie štipendia.</p>
                     </div>
 
                     <div class="tab-pane well fade p-5 bg-light" id="after_travel">
                         <h3>Čo odovzdať po návrate</h3>
-                        <p>1) Dokument potvrzující období studia v zahraničí</p>
-                        <p> 2) Výpis výsledků studia (úspěšné splnění min. 3 předmětů)</p>
-                        <p> 3) Závěrečná zpráva ze studijiního pobytu (osnovu lze stáhnout <a
-                                    href="http://fim.uhk.cz/mobility2/data/doc/taiwan/osnova.doc">zde</a>)</p>
+                        <p>1) Dokument potvrdzujúci obdobie štúdia v zahraničí</p>
+                        <p>2) Výpis výsledkov štúdia (úspešné splnenie predmetov)</p>
+                        <p>3) Napísať odozvu zo študijiného pobytu - <a href="{{ url('feed') }}">TU</a></p>
                     </div>
 
                     <div class="tab-pane well fade p-5 bg-light" id="messages">
                         <h3>Správy účastníkov</h3>
-                        <p>Zprávy účastníků studijních pobytů v Kazachstánu najdete <a href="{{ url('feed') }}">TU</a>.
-                        </p>
+
+                        @if (!$getFeedback->isEmpty())
+                            <div class="nonloop-block-13 p-5 owl-carousel border shadow">
+                                @foreach ($getFeedback as $Feedback)
+                                    <div class="item">
+                                                <div class="col-lg-6 mb-4">
+                                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" alt="Image" class="img-md-fluid">
+                                                </div>
+                                                <div class="col-lg-12 p-md-3 align-self-center" style="background: rgba(255,255,255,0.7);text-align: justify;">
+                                                    <h3>{{ $Feedback->challenge->name }}</h3>
+                                                    <p class="text-black"><strong><em>"{{ $Feedback->comment }}"</em></strong></p>
+                                                    <p><em>{{ date('d.m.Y', strtotime($Feedback->created_at)) }}</em>,
+                                                        <a href="mailto:{{ $Feedback->student->email }}">{{ $Feedback->student->name }} {{ $Feedback->student->lname }}</a><br>
+                                                        <strong>{{ $Feedback->rate }}</strong>
+                                                    </p>
+                                                </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @else
+                            <p><h5 class="d-flex justify-content-center">Túto výzvu zatiaľ nikto neohodnotil.</h5></p>
+                        @endif
+
                     </div>
 
                     <div class="tab-pane well fade p-5 bg-light" id="photogallery">
                         <h3>Fotogaléria</h3>
                         <div class="content gallery">
 
-                            <a href="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/slider1-1024x480.jpg"
-                               title="" class="fancybox" rel="group1">
-                                <img src="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/slider1-197x160.jpg"
-                                     alt="" width="197" height="160">
+                            <a href="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" rel="group1">
+                                <img src="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" width="200" height="200" class="border shadow">
                             </a>
-                            <a href="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/almaty_kazakhstan-1531176-1024x576.jpg"
-                               title="" class="fancybox" rel="group1">
-                                <img src="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/almaty_kazakhstan-1531176-197x160.jpg"
-                                     alt="" width="197" height="160">
-                            </a>
-                            <a href="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/kazach_shymkent-1253636-1024x768.jpg"
-                               title="" class="fancybox" rel="group1">
-                                <img src="http://edu.uhk.cz/mobility/wp-content/uploads/2016/10/kazach_shymkent-1253636-197x160.jpg"
-                                     alt="" width="197" height="160">
-                            </a>
+                            @foreach($getFeedback as $Feedback)
+                                <a href="{{ asset('feedback/')}}/{{ $Feedback->photo }}" rel="group1">
+                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" width="200" height="200" class="border shadow">
+                                </a>
+                            @endforeach
+
                         </div>
-
-
                     </div>
 
                 </div> <!-- tab-content col-lg-9 col-sm-6 col-xs-12 pageContent -->

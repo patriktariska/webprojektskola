@@ -199,7 +199,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-6">
-                    <h2 class="font-weight-light text-black text-center">Feedback Študentov</h2>
+                    <h2 class="font-weight-light text-black text-center">Odozvy študentov</h2>
                 </div>
             </div>
             @if (!$feedback->isEmpty())
@@ -225,7 +225,7 @@
                     @endforeach
                 </div>
             @else
-                <h5 class="d-flex justify-content-center">Momentálne sa nenachádza žiaden feedback študenta</h5>
+                <h5 class="d-flex justify-content-center">Momentálne sa nenachádzajú žiadne odozvy študentov.</h5>
             @endif
         </div>
     </div>

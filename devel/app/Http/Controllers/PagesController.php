@@ -38,10 +38,12 @@ class PagesController extends Controller
     // Challenge Page //
     public function getChallenge($id){
         $getChallenge = Challenge::with('Mobility', 'School')->where('id' , $id)->first();
+        $getFeedback = Feedback::with('Challenge')->where('challenge_id', $id)->get();
 
         //return response()->json($getChallenge);
-        return view('public.pages.extension.mobility.show', compact('getChallenge'));
+        return view('public.pages.extension.mobility.show', compact('getChallenge', 'getFeedback'));
     }
+
 
     public function getAllChallenges(){
         $getChallenges = Challenge::with('Mobility')->orderBy('end', 'asc')->get();
