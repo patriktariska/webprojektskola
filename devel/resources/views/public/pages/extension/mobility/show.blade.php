@@ -169,13 +169,13 @@
                     <div class="box">
                         <div>
                             <ul class="nav tab-menu nav-pills nav-stacked pr15">
-                                <li><a href="#info" data-toggle="tab">Základné informácie</a></li>
-                                <li><a href="#universities" data-toggle="tab">Partnerské univerzity</a></li>
-                                <li><a href="#conditions" data-toggle="tab">Podmienky vycestovania</a></li>
-                                <li><a href="#before_travel" data-toggle="tab">Čo zariadiť pred výjazdom</a></li>
-                                <li><a href="#after_travel" data-toggle="tab">Čo odovzdať po návrate</a></li>
-                                <li><a href="#messages" data-toggle="tab">Správy účastníkov</a>
-                                <li><a href="#photogallery" data-toggle="tab">Fotogaléria</a></li>
+                                <li><a href="#info" data-toggle="tab"><strong>Základné informácie</strong></a></li>
+                                <li><a href="#universities" data-toggle="tab"><strong>Partnerské univerzity</strong></a></li>
+                                <li><a href="#conditions" data-toggle="tab"><strong>Podmienky vycestovania</strong></a></li>
+                                <li><a href="#before_travel" data-toggle="tab"><strong>Čo zariadiť pred výjazdom</strong></a></li>
+                                <li><a href="#after_travel" data-toggle="tab"><strong>Čo odovzdať po návrate</strong></a></li>
+                                <li><a href="#messages" data-toggle="tab"><strong>Správy účastníkov</strong></a>
+                                <li><a href="#photogallery" data-toggle="tab"><strong>Fotogaléria</strong></a></li>
                                 <li>
                                 @if(auth()->check())
                                     {{ Form::open(['route' => 'interest.challenges',  'method' => 'POST', 'class'=>'form']) }}
@@ -211,7 +211,7 @@
                         </p>
                     </div>
 
-                    <div class="tab-pane well fade box p-5 bg-light" id="universities">
+                    <div class="tab-pane well fade box p-5" id="universities">
                         <h3>Partnerské univerzity</h3>
                         <table style="width:100%;" class="table table-striped table-bordered border shadow">
                             <tbody>
@@ -260,21 +260,17 @@
                         <h3>Čo odovzdať po návrate</h3>
                         <p>1) Dokument potvrdzujúci obdobie štúdia v zahraničí</p>
                         <p>2) Výpis výsledkov štúdia (úspešné splnenie predmetov)</p>
-                        <p>3) Napísať odozvu zo študijiného pobytu - <a href="{{ url('feed') }}">TU</a></p>
+                        <p>3) Napísať odozvu zo študijiného pobytu - <a href="{{ url('feed') }}"><strong>TU</strong></a></p>
                     </div>
 
-                    <div class="tab-pane well fade p-5 bg-light" id="messages">
+                    <div class="tab-pane well fade p-5" id="messages">
                         <h3>Správy účastníkov</h3>
 
                         @if (!$getFeedback->isEmpty())
-                            <div class="nonloop-block-13 p-5 owl-carousel border shadow">
+                            <div class="nonloop-block-13 p-5 owl-carousel border shadow bg-light">
                                 @foreach ($getFeedback as $Feedback)
                                     <div class="item">
-                                                <div class="col-lg-6 mb-4">
-                                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" alt="Image" class="img-md-fluid">
-                                                </div>
-                                                <div class="col-lg-12 p-md-3 align-self-center" style="background: rgba(255,255,255,0.7);text-align: justify;">
-                                                    <h3>{{ $Feedback->challenge->name }}</h3>
+                                                <div class="col-lg-12 p-md-3 align-self-center" style="background:white;text-align: justify;">
                                                     <p class="text-black"><strong><em>"{{ $Feedback->comment }}"</em></strong></p>
                                                     <p><em>{{ date('d.m.Y', strtotime($Feedback->created_at)) }}</em>,
                                                         <a href="mailto:{{ $Feedback->student->email }}">{{ $Feedback->student->name }} {{ $Feedback->student->lname }}</a><br>
@@ -290,16 +286,17 @@
 
                     </div>
 
-                    <div class="tab-pane well fade p-5 bg-light" id="photogallery">
+                    <div class="tab-pane well fade p-5" id="photogallery">
                         <h3>Fotogaléria</h3>
                         <div class="content gallery">
 
-                            <a href="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" rel="group1">
-                                <img src="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" width="200" height="200" class="border shadow">
+                            <a class="example-image-link" href="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" data-lightbox="example-set" data-title="{!! $getChallenge->name !!}">
+                                <img src="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" width="200" height="200" class="example-image border shadow">
                             </a>
+
                             @foreach($getFeedback as $Feedback)
-                                <a href="{{ asset('feedback/')}}/{{ $Feedback->photo }}" rel="group1">
-                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" width="200" height="200" class="border shadow">
+                                <a class="example-image-link" href="{{ asset('feedback/')}}/{{ $Feedback->photo }}" data-lightbox="example-set" data-title="{!! $getChallenge->name !!}">
+                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" width="200" height="200" class="example-image border shadow">
                                 </a>
                             @endforeach
 
