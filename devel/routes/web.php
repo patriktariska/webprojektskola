@@ -23,6 +23,9 @@ Route::prefix('dashboard')->middleware(['auth', 'auth.admin'])->group(function (
     /*Index page route*/
     Route::get('/', 'Admin\PagesController@index')->name('dashboard');
 
+    /*Student-Challenges route*/
+    Route::get('students', 'Admin\StudentController@index')->name('students.index');
+
     /*Feedback page route*/
     Route::get('feedback/{feedback}', 'Admin\FeedbackController@show')->name('feedback.show');
     Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');

@@ -312,7 +312,7 @@
                         return '<img style="width:60px;" src="{{ asset('feedback') }}/' + photo + '">'
                     }
                 },
-                {data: 'student.name', name: 'student.name'},
+                {data: 'student.email', name: 'student.email'},
                 {data: 'rate', name: 'rate'},
                 {
                     data: 'published',
@@ -519,4 +519,89 @@
         });
     });
 
+</script>
+<script>
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        //AJAX SHOW STUDENTS
+        var table = $('#students_datatable').DataTable({
+            responsive: true,
+            autoWidth: false,
+            processing: true,
+            serverSide: false,
+            pageLength: 6,
+            ajax: "{{ route('students.index') }}",
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6]
+                    }
+                },
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: [1, 2, 3, 4, 5, 6]
+                    }
+                },
+            ],
+            columns: [
+                {data: 'id', name: 'id', 'visible': false},
+                {data: 'name', name: 'name'},
+                {data: 'lname', name: 'lname'},
+                {data: 'email', name: 'email'},
+                {data: 'challenge.[].name', name: 'challenge_name'},
+                {data: 'challenge.[].id', name: 'challenge_id'},                
+                {data: 'challenge.[].pivot.created_at', name: 'created_at'},
+            ],
+            order: [[6, 'asc']],
+        });
+
+        //AJAX DELETE FEEDBACK
+        $('body').on('click', '#delete-feedback', function () {
+            var feedback_id = $(this).data("id");
+            console.log(feedback_id);
+            confirm("Želáte si zmazať záznam prihlásenia?");
+            $.ajax({
+                type: "GET",
+                url: "students/delete/" + feedback_id,
+                success: function (data) {
+                    var oTable = $('#students_datatable').dataTable();
+                    oTable.fnDraw(false);
+                    $('#message-success').html('<div class="alert alert-dismissible callout callout-success">' +
+                        '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+                        '<h4><i class="icon fa fa-check"></i> Výborne!</h4>Feedback bol zmazaný. </div>');
+
+                },
+                error: function (data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
+
+
+    });
 </script>
