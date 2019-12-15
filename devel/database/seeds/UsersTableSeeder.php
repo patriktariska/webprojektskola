@@ -26,18 +26,18 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('password')
         ]);
 
-        $student = User::create([
-            'name' => 'Student',
-            'lname' => 'Mrkvicka',
-            'email' => 'student@student.sk',
-            'password' => bcrypt('password1')
-        ]);
-
         $devel = User::create([
             'name' => 'Devel',
             'lname' => 'Priezvisko',
             'email' => 'devel@devel.sk',
             'password' => bcrypt('password2')
+        ]);
+
+        $student = User::create([
+            'name' => 'Student',
+            'lname' => 'Mrkvicka',
+            'email' => 'student@student.sk',
+            'password' => bcrypt('password1')
         ]);
 
         $student2 = User::create([

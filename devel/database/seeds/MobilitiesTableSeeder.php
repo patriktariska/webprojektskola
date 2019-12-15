@@ -15,10 +15,10 @@ class MobilitiesTableSeeder extends Seeder
         DB::table('mobilities')->delete();
         Mobility::create([
             'type' => 'Erasmus+',
-            'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']);
+            'desc' => 'Erasmus+ je program EÚ na podporu vzdelávania, odbornej prípravy, mládeže a športu v Európe. Jeho rozpočet vo výške 14,7 mld. EUR umožňuje poskytnúť viac ako 4 miliónom Európanov príležitosť študovať, absolvovať odbornú prípravu a získavať skúsenosti v zahraničí.']);
         Mobility::create([
             'type' => 'CEEPUS',
-            'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']);
+            'desc' => 'Stredoeurópsky výmenný program pre univerzitné štúdiá (CEEPUS) podporuje akademické mobility v strednej, východnej a juhovýchodnej Európe, prispieva k európskej integrácii a zdôrazňuje regionálne špecifiká. Program umožňuje rozvíjať spoluprácu slovenských a zahraničných vysokých škôl pomocou vytvárania akademických sietí, v rámci ktorých sa uskutočňuje vedecko-výskumná spolupráca a realizujú sa mobility študentov, doktorandov a vysokoškolských učiteľov. Prioritou je rozvoj spoločných študijných programov vedúcich k dvojitým alebo spoločným diplomom a k spoločnému vedeniu diplomových a dizertačných prác. V rámci programu CEEPUS je takisto možné realizovať exkurzie a letné školy, koordinačné stretnutia a jazykové kurzy, ktoré dopĺňajú odbornú a vedeckú spoluprácu medzi partnerskými univerzitami.']);
 
     }
 }
