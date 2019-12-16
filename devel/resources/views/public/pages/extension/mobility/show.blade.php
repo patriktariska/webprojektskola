@@ -207,7 +207,8 @@
                             {!! $getChallenge->description !!}
                         </p>
                         <p>
-                            <h6>Prihlasovať sa môžete do <strong>{{ date('d.m.Y', strtotime($getChallenge->end)) }}</strong>.</h6>
+                            <h6>Táto výzva začína od <strong>{{ date('d.m.Y', strtotime($getChallenge->start)) }}</strong> a
+                            prihlasovať sa môžete do <strong>{{ date('d.m.Y', strtotime($getChallenge->end)) }}</strong>.</h6>
                         </p>
                     </div>
 
@@ -291,12 +292,12 @@
                         <div class="content gallery">
 
                             <a class="example-image-link" href="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" data-lightbox="example-set" data-title="{!! $getChallenge->name !!}">
-                                <img src="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" width="200" height="200" class="example-image border shadow">
+                                <img src="{{ asset('admin/mobility') }}/{{ $getChallenge->title_photo }}" width="40%" class="example-image border shadow">
                             </a>
 
                             @foreach($getFeedback as $Feedback)
                                 <a class="example-image-link" href="{{ asset('feedback/')}}/{{ $Feedback->photo }}" data-lightbox="example-set" data-title="{!! $getChallenge->name !!}">
-                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" width="200" height="200" class="example-image border shadow">
+                                    <img src="{{ asset('feedback/')}}/{{ $Feedback->photo }}" width="40%" class="example-image border shadow">
                                 </a>
                             @endforeach
 

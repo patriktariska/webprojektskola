@@ -14,50 +14,48 @@ class FeedbacksTableSeeder extends Seeder
     {
             $challenge = Feedback::create([
                 'user_id' => 3,
-                'challenge_id' => rand(1,6),
+                'challenge_id' => 1,
                 'comment' => 'Super pobyt.',
-                'photo' => 'selfie1.jpg',
+                'photo' => 'selfie_denmark.png',
                 'rate' => 'Odporúčam',
-                'published' => false,
+                'published' => true,
             ]);
 
         $challenge = Feedback::create([
             'user_id' => 4,
-            'challenge_id' => rand(1,6),
+            'challenge_id' => 2,
             'comment' => 'Veľa nových skúseností.',
-            'photo' => 'selfie2.jpg',
+            'photo' => 'selfie_czech.png',
             'rate' => 'Odporúčam',
-            'published' => false,
+            'published' => true,
         ]);
 
         $challenge = Feedback::create([
             'user_id' => 5,
-            'challenge_id' => rand(1,6),
+            'challenge_id' => 3,
             'comment' => 'Určite odporúčam vyskúšať!',
-            'photo' => 'selfie3.jpg',
+            'photo' => 'selfie_austria.png',
             'rate' => 'Odporúčam',
-            'published' => false,
+            'published' => true,
         ]);
 
         $challenge = Feedback::create([
             'user_id' => 6,
-            'challenge_id' => rand(1,6),
+            'challenge_id' => 4,
             'comment' => 'Hodnotím túto skúsenosť veľmi pozitívne',
-            'photo' => 'selfie4.jpg',
+            'photo' => 'selfie_berlin.png',
             'rate' => 'Odporúčam',
-            'published' => false,
+            'published' => true,
         ]);
 
         $challenge = Feedback::create([
             'user_id' => 7,
-            'challenge_id' => rand(1,6),
+            'challenge_id' => 6,
             'comment' => 'Nové poznatky + nový priatelia = super pobyt!',
-            'photo' => 'selfie5.jpg',
+            'photo' => 'selfie_moscow.png',
             'rate' => 'Odporúčam',
-            'published' => false,
+            'published' => true,
         ]);
-
-
 
     }
 }

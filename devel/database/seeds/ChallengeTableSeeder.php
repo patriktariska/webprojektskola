@@ -15,25 +15,25 @@ class ChallengeTableSeeder extends Seeder
     public function run()
     {
         $date = Carbon::create(2019, 12, 17, 0, 0, 0);
-{
+        {
             $challenge = Challenge::create([
 
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Dánsko',
-                'description' => '<p>Københavns Universitet</p> Københavns Universitet (po slovensky Kodanská univerzita) je druhá najväčšia a najstaršia univerzitná a výskumná inštitúcia v Dánsku. ',
-                'capacity' => rand(2,50),
+                'description' => 'Dánsko ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'koge.jpg'
+                'title_photo' => 'dennmark_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 47990,
                 'name' => 'Københavns Universitet',
                 'email' => 'kobe@gmail.com',
-                'url' => str_random(4).'@kobe.com',
-                'address' =>  '2000 Frederiksberg C',
-                'postcode' =>rand(10,100),
+                'url' => 'https://www.ku.dk',
+                'address' => 'Nørregade 10, 1165 København, Dánsko',
+                'postcode' => 1165,
             ]);
 
             $challenge->School()->attach($school);
@@ -41,22 +41,22 @@ class ChallengeTableSeeder extends Seeder
 
         {
             $challenge = Challenge::create([
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Česká republika',
-                'description' => '<p>Karlova univerzita</p> Karlova univerzita (čes. Univerzita Karlova, skratka UK) je najstaršia univerzita v strednej Európe a popredná česká vysoká škola.',
-                'capacity' => rand(2,50),
+                'description' => 'Česká republika ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'karlo.jpg'
+                'title_photo' => 'czech_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 14805,
                 'name' => 'Karlova univerzita',
                 'email' => 'karlo@gmail.com',
-                'url' => str_random(4).'@karlo.cz',
-                'address' => 'Ovocný trh 560/5',
-                'postcode' =>rand(10,100),
+                'url' => 'https://cuni.cz/UK-4.html',
+                'address' => 'Opletalova 38, 110 00 Staré Město, Česko',
+                'postcode' => 11000,
             ]);
 
             $challenge->School()->attach($school);
@@ -64,22 +64,22 @@ class ChallengeTableSeeder extends Seeder
 
         {
             $challenge = Challenge::create([
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Rakúsko',
-                'description' => '<p>Universität Wien</p> Viedenská univerzita je hlavná všeobecná univerzita vo Viedni.',
-                'capacity' => rand(2,50),
+                'description' => 'Rakúsko ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'wien.jpg'
+                'title_photo' => 'austria_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 7157,
                 'name' => 'Universität Wien',
                 'email' => 'wienuni@gmail.com',
-                'url' => str_random(4).'@wienuni.com',
-                'address' => str_random(10),
-                'postcode' =>rand(10,100),
+                'url' => 'https://www.univie.ac.at',
+                'address' => 'Universitätsring 1, 1010 Wien, Rakúsko',
+                'postcode' => 1010,
             ]);
 
             $challenge->School()->attach($school);
@@ -87,22 +87,22 @@ class ChallengeTableSeeder extends Seeder
 
         {
             $challenge = Challenge::create([
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Nemecko',
-                'description' => '<p>Humboldt-Universität</p> Humboldt-Universität zu Berlin je najstaršia berlínska univerzita.',
-                'capacity' => rand(2,50),
+                'description' => 'Nemecko ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'humbo.jpg'
+                'title_photo' => 'germany_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 15646,
                 'name' => 'Humboldt-Universität',
                 'email' => 'humboldt@gmail.com',
-                'url' => str_random(4).'@humbo.de',
-                'address' => 'Unter den Linden 6',
-                'postcode' =>rand(10,100),
+                'url' => 'https://www.hu-berlin.de/de',
+                'address' => 'Unter den Linden 6, 10117 Berlin, Nemecko',
+                'postcode' => 10117,
             ]);
 
             $challenge->School()->attach($school);
@@ -110,22 +110,22 @@ class ChallengeTableSeeder extends Seeder
 
         {
             $challenge = Challenge::create([
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Maďarsko',
-                'description' => '<p>Universität Budapest</p> <strong>Budapešť </strong>Andrássy Gyula Deutschsprachige Universität Budapest  je súkromná univerzita v Budapešti. ',
-                'capacity' => rand(2,50),
+                'description' => 'Maďarsko ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'buda.jpg'
+                'title_photo' => 'hungary_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 21039,
                 'name' => 'Universität Budapest',
                 'email' => 'budapest@gmail.com',
-                'url' => str_random(4).'@budapest.hu',
-                'address' => 'Pollack Mihály tér 3',
-                'postcode' =>rand(10,100),
+                'url' => 'https://www.andrassyuni.eu',
+                'address' => 'Budapest, Pollack Mihály tér 3, 1088 Maďarsko',
+                'postcode' => 1088,
             ]);
 
             $challenge->School()->attach($school);
@@ -133,27 +133,59 @@ class ChallengeTableSeeder extends Seeder
 
         {
             $challenge = Challenge::create([
-                'mobility_id' => rand(1,2),
+                'mobility_id' => rand(1, 2),
                 'name' => 'Rusko',
-                'description' => '<p>Lomonosova univerzita</p> <strong>Moskva </strong>Moskovskij gosudarstvennyj universitet imeni M. V. Lomonosova je najstaršia a najväčšia univerzita v Rusku.',
-                'capacity' => rand(2,50),
+                'description' => 'Rusko ponúka jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
                 'start' => $date->format('Y-m-d H:i:s'),
                 'end' => $date->addWeeks(rand(4, 26)),
-                'title_photo' => 'moskva.jpg'
+                'title_photo' => 'russia_challenge.jpg'
             ]);
 
             $school = School::create([
-                'city_id' => rand(10,1000),
+                'city_id' => 36735,
                 'name' => 'Lomonosova univerzita',
                 'email' => 'moskva@gmail.com',
-                'url' => str_random(4).'@moskva.ru',
-                'address' => 'ul. Leninskiye Gory 1',
-                'postcode' =>rand(10,100),
+                'url' => 'https://www.msu.ru/en/',
+                'address' => 'ul. Leninskiye Gory, 1, Moscow, Rusko, 119991',
+                'postcode' => 119991,
             ]);
 
-
-
             $challenge->School()->attach($school);
-            }
+        }
+
+        {
+            $challenge = Challenge::create([
+                'mobility_id' => rand(1, 2),
+                'name' => 'Spojené štáty (USA)',
+                'description' => 'Spojené štáty americké ponúkajú jeden z najkvalitnejších vzdelávacích systémov na svete.',
+                'capacity' => rand(2, 50),
+                'start' => $date->format('Y-m-d H:i:s'),
+                'end' => $date->addWeeks(rand(4, 26)),
+                'title_photo' => 'usa_challenge.jpg'
+            ]);
+
+            $school = School::create([
+                'city_id' => 41640,
+                'name' => 'Harvard University',
+                'email' => 'harvard@gmail.com',
+                'url' => 'https://www.harvard.edu',
+                'address' => 'Cambridge, MA, Spojené štáty',
+                'postcode' => 2139,
+            ]);
+            $challenge->School()->attach($school);
+
+            $school = School::create([
+                'city_id' => 41640,
+                'name' => 'Massachusetts Institute of Technology',
+                'email' => 'MIT@gmail.com',
+                'url' => 'http://www.mit.edu',
+                'address' => '77 Massachusetts Ave, Cambridge, MA 02139, Spojené štáty',
+                'postcode' => 2139,
+            ]);
+            $challenge->School()->attach($school);
+        }
+
+
     }
 }
