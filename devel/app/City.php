@@ -19,6 +19,6 @@ class City extends Model
     }
 
     public function Schools(){
-        return $this->$this->hasMany('App\School');
+        return $this->hasMany('App\School');
     }
 }

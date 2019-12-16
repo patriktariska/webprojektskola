@@ -218,15 +218,13 @@
                             <tbody>
                             <tr>
                                 <th>Univerzita</th>
-                                <th>Mesto</th>
-                                <th>Krajina</th>
+                                <th>Adresa</th>
                                 <th>Kontakt</th>
                             </tr>
                             @foreach($getChallenge->school as $Skola)
                                 <tr>
                                     <td><a href="{{ $Skola->url }}" target="_blank">{{ $Skola->name }}</a></td>
-                                    <td>{{ $Skola->city_id }}</td>
-                                    <td>{{ $Skola->city_id }}</td>
+                                    <td>{{ $Skola->address }}</td>
                                     <td>{{ $Skola->email }}</td>
                                 </tr>
                             @endforeach
