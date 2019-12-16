@@ -20,7 +20,7 @@
             </div>
             <div class="col-sm-4 invoice-col">
                 <address>
-                    Názov mobility: <strong>{{ $getMobilities->name }}</strong><br>
+                    Názov výzvy: <strong>{{ $getMobilities->name }}</strong><br>
                     Typ mobility: {{ $getMobilities->type }}<br>
                     Kapacita: {{ $getMobilities->capacity }}<br>
                     Začiatok: {{ $getMobilities->start }}<br>
@@ -43,7 +43,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <p class="lead">Popis mobility:</p>
+                <p class="lead">Popis výzvy:</p>
                 <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
                     {{ strip_tags($getMobilities->description) }}
                 </p>
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <a href="{{ route('mobility.index') }}" class="btn btn-primary pull-right" style="margin-right: 5px;">
-                    <i class="fa fa-angle-left"></i> Späť na mobility
+                    <i class="fa fa-angle-left"></i> Späť na výzvy
                 </a>
             </div>
         </div>

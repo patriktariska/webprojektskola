@@ -29,7 +29,7 @@
                     @foreach($getChallenges as $challenge)
                     <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
                         <div class="container border pt-3 pb-3 border shadow">
-                            <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
+                            <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" style="width:500px; height:200px;" class="img-fluid rounded">
                             <div class="text-left pt-3" style="line-height: 10px">
                                 <p style="font-size: 22px">{{ $challenge->name }}</p>
                                 <p>Typ: {{ $challenge->Mobility->type }}</p>

@@ -13,10 +13,10 @@
 
     <section class="content-header">
         <h1>
-            Mobility
-            <small>správa mobilít</small>
+            Výzvy
+            <small>správa výziev</small>
             <a class="btn btn-primary pull-right" href="{{ route('mobility.index') }}">
-                <i class="fa fa-arrow-circle-left"></i>&nbsp;Späť na mobility
+                <i class="fa fa-arrow-circle-left"></i>&nbsp;Späť na výzvy
             </a>
         </h1>
     </section>
@@ -26,7 +26,7 @@
             <div class="col-xs-12">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Vytvorenie novej mobility</h3>
+                        <h3 class="box-title">Vytvorenie novej výzvy</h3>
                     </div>
                     {{ Form::open(['route' => 'mobility.store','files' => 'true', 'method' => 'POST', 'class'=>'form']) }}
                     {{ csrf_field() }}
@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Názov mobility</label>
+                                    <label>Názov výzvy</label>
                                     <input type="text" name="name" id="name" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Kapacita mobility</label>
+                                    <label>Kapacita výzvy</label>
                                     <input type="number" name="capacity" id="capacity" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
@@ -74,14 +74,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Začiatok mobility</label>
+                                    <label>Začiatok výzvy</label>
                                     <input type="date" name="start" id="start" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Koniec mobility</label>
+                                    <label>Koniec výzvy</label>
                                     <input type="date" name="end" id="end" class="form-control" placeholder="Enter ...">
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Nahladový obrázok</label>
+                                    <label>Náhľadový obrázok</label>
                                     <input type="file" name="myFile" class="form-control" required>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </div>

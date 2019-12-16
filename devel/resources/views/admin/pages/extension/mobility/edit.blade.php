@@ -13,10 +13,10 @@
 
     <section class="content-header">
         <h1>
-            Mobility
-            <small>správa mobilít</small>
+            Výzvy
+            <small>správa výziev</small>
             <a class="btn btn-primary pull-right" href="{{ route('mobility.index') }}">
-                <i class="fa fa-arrow-circle-left"></i>&nbsp;Späť na mobility
+                <i class="fa fa-arrow-circle-left"></i>&nbsp;Späť na výzvy
             </a>
         </h1>
     </section>
@@ -26,7 +26,7 @@
             <div class="col-xs-12">
                 <div class="box box-warning">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Upravenie mobility</h3>
+                        <h3 class="box-title">Upravenie výzvy</h3>
                     </div>
                     {{ Form::model($getMobility, ['method' => 'PATCH','files' => 'true','route' => ['mobility.update', $getChallenge->id]]) }}
                     {{ csrf_field() }}
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Názov mobility</label>
+                                    <label>Názov výzvy</label>
                                     <input type="text" value="{{ $getChallenge->name }}" name="name" id="name" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Kapacita mobility</label>
+                                    <label>Kapacita výzvy</label>
                                     <input type="number" value="{{ $getChallenge->capacity }}" name="capacity" id="capacity" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
@@ -77,14 +77,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Začiatok mobility</label>
+                                    <label>Začiatok výzvy</label>
                                     <input type="date" value="{{ $getChallenge->start }}" name="start" id="start" class="form-control"
                                            placeholder="Enter ...">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Koniec mobility</label>
+                                    <label>Koniec výzvy</label>
                                     <input type="date" value="{{ $getChallenge->end }}" name="end" id="end" class="form-control" placeholder="Enter ...">
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Nahladový obrázok</label>
+                                    <label>Náhľadový obrázok</label>
                                     <img src="{{ asset('/admin/mobility/'.$getChallenge->title_photo) }}" style="width:100px;"/>
                                     <input type="file" name="myFile" class="form-control">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

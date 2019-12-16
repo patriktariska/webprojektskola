@@ -7,7 +7,7 @@
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                         <h1 class="text-white font-weight-light">Študijný pobyt</h1>
                         <p class="mb-5">Student Mobility for Studies</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
+                        <p><a href="#viac" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
 
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                         <h1 class="text-white font-weight-light">Stáž</h1>
                         <p class="mb-5">Student Mobility for Traineeships</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
+                        <p><a href="#viac" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                         <h1 class="text-white font-weight-light">Prednáškový pobyt</h1>
                         <p class="mb-5">Teaching Mobility</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
+                        <p><a href="#viac" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                         <h1 class="text-white font-weight-light">Školenie</h1>
                         <p class="mb-5">Staff Training Mobility</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
+                        <p><a href="#viac" class="btn btn-primary py-3 px-5 text-white">Zisti viac!</a></p>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 @foreach($challenges as $challenge)
                     <div class="col-md-6 col-lg-4 mb-4 pb-4 mb-lg-0">
                         <div class="container border pt-3 pb-3 border shadow" >
-                            <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" class="img-fluid rounded">
+                            <img src="{{ asset('admin/mobility') }}/{{ $challenge->title_photo }}" alt="Image" style="width:500px; height:200px;" class="img-fluid rounded">
                             <div class="text-left pt-3" style="line-height: 10px">
                                 <p style="font-size: 22px">{{ $challenge->name }}</p>
                                 <p>Typ: {{ $challenge->Mobility->type }}</p>
@@ -112,11 +112,11 @@
     </div>
 
     <div class="site-section bg-light">
-        <div class="container">
+        <div class="container" id="viac">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center">
-                    <h2 class="font-weight-light text-black">Výhody ERASMUS+</h2>
-                    <p class="color-black-opacity-5">Prečo ísť na Erasmus?</p>
+                    <h2 class="font-weight-light text-black">Výhody mobilít</h2>
+                    <p class="color-black-opacity-5">Prečo ísť na mobilitu?</p>
                 </div>
             </div>
             <div class="row align-items-stretch text-justify">
